@@ -9,11 +9,11 @@ function showImage(image){
 }
 function inventoryButton(){
 	if(statsScreenVisible){
-		document.getElementById("statsScreen").style.visibility = "hidden";
+		document.getElementById("inventory").style.visibility = "hidden";
 		statsScreenVisible=false;
 	}
 	else{
-		document.getElementById("statsScreen").style.visibility = "visible";
+		document.getElementById("inventory").style.visibility = "visible";
 		statsScreenVisible=true;
 	}
 }
