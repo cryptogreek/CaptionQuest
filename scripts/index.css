@@ -57,6 +57,7 @@ html, body {
 	z-index: 1;
 	overflow: scroll;
 	overflow-x: hidden;
+	visibility: hidden;
 }
 
 /*Output*/
