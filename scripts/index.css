@@ -1,0 +1,213 @@
+/*Misc*/
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;	
+}
+
+/*Menu*/
+.menu {
+	box-sizing: border-box;
+	width: 20%;
+	min-width: 130px;
+	height: 100%;
+	text-align: center;
+	font-size: 125%;
+	float:left;
+	color: white;
+  	background-color: #110000;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	border-style: groove;
+	border-width: 5px;
+	line-height: 50%;
+}
+.title {
+	font-size:150%;
+	line-height: 10%;
+}
+.statsList {
+	line-height: 50%;
+	position:relative;
+	left:25%;
+	width:60%;
+	float:left;
+	text-align:left;
+}
+.statsScore {
+	line-height:50%;
+	width:33%;
+	float:left;
+	text-align:left;
+}
+.invis{
+	display: none;
+}
+.inventory {
+	position: absolute;
+	top: 10%;
+	left:30%; 
+	width: 60%;
+	height: 80%;
+	background-color: #000000;
+  	border: 3px solid white;
+  	border-radius: 5px;
+	z-index: 1;
+	overflow: scroll;
+	overflow-x: hidden;
+	visibility: hidden;
+}
+
+/*Output*/
+.wrapper {
+	width: 80%;
+	height: 100%;
+	float: right;
+  	background-color: #111111;
+	overflow: auto;
+	overflow-x: hidden;
+	color:white;
+}
+.output {
+	color: white;
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-top: 4%;
+	font-size: 135%;
+	overflow-y:auto;
+	line-height: 150%;
+	border-style: groove groove none none;
+	border-width:5px;
+}
+.img{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:100%;
+	max-height:89vh;
+	width:auto;
+	height:auto;
+}
+.choiceText {
+	display:inline-block;
+	color: #7777EE;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 15%;
+	cursor: pointer;
+	border-style:outset;
+}
+.choiceText:hover {
+	color: #9999EE;
+	text-align:center;
+	cursor: pointer;
+}
+.choiceContainer{
+	text-align:center;
+}
+.menuChoiceText {
+	color: #7777EE;
+	text-align:center;
+	cursor: pointer;
+	line-height: 50%;
+}
+.menuChoiceText:hover {
+	color: #A622EE;
+	text-align:center;
+	cursor: pointer;
+}
+.tinyText {
+	color: #BBBBBB;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	font-size: 70%;
+}
+.specialText {
+	color: lightgreen;
+	font-weight: bold;
+}
+
+/*Dialogue*/
+.textBox {
+	position: relative;
+	display: block;
+	width: 98%;
+  	min-height: 92px;
+	padding: 5px;
+	overflow: hidden;
+  	background-color: #111122;
+  	border: 3px solid white;
+  	border-radius: 5px;
+}
+.textBox p {
+	margin: 0px;
+	padding: 0px;
+}
+.textThumb {
+	position: relative;
+  	display: block;
+    margin: auto;
+  	padding: 1px;
+ 	height: 84px;
+	width: 84px;
+  	float: left;
+	overflow: hidden;
+  	margin: 0px 10px 0px 0px;
+  	border: 3px solid white;
+  	border-radius: 5px;
+}
+.textName {
+	color: white;
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+}
+
+/*Windows*/
+.windowTitle {
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	border-bottom: 3px solid white;
+	cursor: pointer;
+}
+.windowLeft {
+	position:absolute;
+	box-sizing: border-box;
+	position: block;
+	height: 80%;
+	width: 50%;
+}
+.windowRight {
+	position:absolute;
+	box-sizing: border-box;
+	left:50%;
+	position: block;
+	height: 80%;
+	width: 50%;
+}
+
+/*Footer*/
+.footer {
+	height: 0%;
+	overflow: hidden;
+}
+.footer .switch {
+	font-size: 300%;
+	height: 100px;
+	width: 33%;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+	box-sizing: border-box;
+	float: left;
+  	border: 3px solid white;
+  	border-radius: 5px;
+}

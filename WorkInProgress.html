@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<title>WORK IN PROGRESS</title>
+	<script src="scripts/sceneList.js"></script>
+	<script src="scripts/index.js"></script>
+	<link rel="stylesheet" type="text/css" href="scripts/index.css">
+</head>
+<body onload="writeScene('characterCreate')">
+
+	<!-- <img src="pikapeek.png"> -->
+	<div id="menu" class="menu">
+		<p id="playerName" class="title">Sissy Life</p><span><p>V0.1</p>
+		<div id="bitch" class="menuChoiceText">
+			<p id="bitchPara" onclick="writeScene('choseBitch')">Bitch</p>
+		</div>
+		<div id="kennel" class="menuChoiceText">
+			<p id="kennelPara" onclick="writeScene('bitchCheck')">Kennel</p>
+		</div>
+		<div id="restart" class="menuChoiceText">
+			<p id="restartButton" onclick="writeScene('beginning')">Restart</p>
+		</div>
+		<div id="charCreate" class="menuChoiceText">
+			<p id="charCreateButt" onclick="writeScene('characterCreate')">charCreate</p>
+		</div>
+		<br>
+		<p id="statTitle" class="menuChoiceText" onclick="statsButton()" style="line-height: 0%">STATS</p>
+		<div id="statsList" class="statsList">
+			<p id="namePlayerLabel">Name: </p>
+			<p id="strPlayerLabel">STR: </p>
+			<p id="dexPlayerLabel">DEX: </p>
+			<p id="intPlayerLabel">INT: </p>
+			<p id="chaPlayerLabel">CHA: </p>
+			<p id="subPlayerLabel">SUB: </p>
+		</div>
+		<div id="statsScore" class="statsScore">
+			<p id="namePlayer">???</p>
+			<p id="strPlayer">???</p>
+			<p id="dexPlayer">???</p>
+			<p id="intPlayer">???</p>
+			<p id="chaPlayer">???</p>
+			<p id="subPlayer">???</p>
+		</div>
+		<div id="bitchPlayer" class="invis">
+			<p id="bitchPlayerLabel">Bitch: Yes</p>
+		</div>
+	</div>
+
+	<div id="wrapper" class="wrapper">
+		<div id="inventory" class="inventory">
+			<p class="windowTitle" onclick="inventory()">INVENTORY</p>
+		</div>
+		<div id = "output" class = "output"></div>
+		</div>
+
+	</div>
+
+</body>
+
+</html>
