@@ -27,7 +27,7 @@ function writeScene(scene) {
 					<button type="button" onclick="changeBody(1)">Ashen Road</button>
 					<button type="button" onclick="changeBody(2)">Arcane Road</button>
 					<button type="button" onclick="changeBody(3)">SFM Road</button>
-					<p>Current deity: <span id = 'bodytype'>Lady of Ash.</span></p>
+					<p>Current deity: <span id = 'bodytype'>The Lady of Ash.</span></p>
 				`;
 			}
 			document.getElementById('output').innerHTML += `

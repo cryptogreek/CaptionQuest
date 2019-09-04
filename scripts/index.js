@@ -1003,7 +1003,7 @@ function changeBody(n) {
 	data.story.bodytype = n;
 	switch(n) {
 		case 1:
-			document.getElementById('bodytype').innerHTML = "Asira, Lady of Ash";
+			document.getElementById('bodytype').innerHTML = "The Lady of Ash";
 			document.getElementById('targetDeity').innerHTML = `
 			<p>The first road seems to be made of cobblestone, but is covered in a thick layer of ash that you can see your footprints in with every step. The ash is completely barren, and all of the soil it touches seems to become unable to carry life of any sort.</p>
 			<p>Despite this, you can feel incredible power in the ash. With every step, you can feel your body becoming stronger, if only by the smallest amount.</p>
@@ -1012,7 +1012,7 @@ function changeBody(n) {
 			`;
 		break;
 		case 2:
-			document.getElementById('bodytype').innerHTML = "Majiana, Mistress of Magic";
+			document.getElementById('bodytype').innerHTML = "The Noble One";
 			document.getElementById('targetDeity').innerHTML = `
 			<p>The second road seems to made of some sort of ephemeral, half-there stone, feeling more like cloth as you walk along it than anything else. There's power to it, but there's a pull as well - an impulse towards a powerful greed that only grows stronger the further you start to go.</p>
 			<p>The energy that flows from the shimmering stone fills your body more and more with each step, the sounds of the arcane coursing through your head as it does.</p>
@@ -1021,7 +1021,7 @@ function changeBody(n) {
 			`;
 		break;
 		case 3:
-			document.getElementById('bodytype').innerHTML = "Twinkus, Biggus Dickimus";
+			document.getElementById('bodytype').innerHTML = "The Dick King";
 			document.getElementById('targetDeity').innerHTML = `
 			<p>The third road is a glitchy fucking mess and is probably made of dicks or something. They bounce and waver, feeling harder than any stone underneath your heel as you get aroused at the thought of someone trampling on your dick just like this.</p>
 			<p>You can feel your body becoming more lithe and dextrous with each step forward, but you can also feel your mind's dominance slowly eroding along the way.</p>
