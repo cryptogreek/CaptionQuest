@@ -898,21 +898,21 @@ function changeName(target) {
 			console.log("bodytype: "+data.story.bodytype);
 			switch(data.story.bodytype){
 				case 1:
-					data.story.deityWorshipped = "Lady of Ash";
+					data.story.deityWorshipped = "Asira, Lady of Ash";
 					data.story.playerStr = 1;
 					data.story.playerAgl = 0;
 					data.story.playerMag = 0;
 					data.story.playerEss = 0;
 				break;
 				case 2:
-					data.story.deityWorshipped = "Majiana";
+					data.story.deityWorshipped = "Majiana, Noble Mistress";
 					data.story.playerStr = 0;
 					data.story.playerAgl = 0;
 					data.story.playerMag = 1;
 					data.story.playerEss = 0;
 				break;
 				case 3:
-					data.story.deityWorshipped = "Twinkus";
+					data.story.deityWorshipped = "Twinkus, Dick King";
 					data.story.playerStr = 0;
 					data.story.playerAgl = 1;
 					data.story.playerMag = 0;
