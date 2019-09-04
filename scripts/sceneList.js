@@ -48,7 +48,6 @@ function writeScene(scene) {
 			break;
 		}
 		case "lookInTheMirror" : {
-			data.story.playerSta = 10;
 			switch (data.story.bodytype) {
 				case 1:
 				writeText("You can feel yourself getting stronger, your body almost feeling like it's growing with each step, yet somehow getting lighter. You can see your exposed body's musculature as you feel a heat soaking into your skin as the distant sun seems to turn orange and much, much brighter.");

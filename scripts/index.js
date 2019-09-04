@@ -1946,7 +1946,7 @@ function generateInv() {
 		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Infertility</p>
-			<img class ="itemImage" src="images/CQ/items/curseLoa.png">
+			<img class ="itemImage" src="images/CQ/items/curseLoaFull.png">
 		</div>
 		`;
 	}
@@ -1954,7 +1954,7 @@ function generateInv() {
 		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Narcissism</p>
-			<img class ="itemImage" src="images/CQ/items/curseNob.png">
+			<img class ="itemImage" src="images/CQ/items/curseNobFull.png">
 		</div>
 		`;
 	}
@@ -1962,7 +1962,7 @@ function generateInv() {
 		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Kindness</p>
-			<img class ="itemImage" src="images/CQ/items/curseBob.png">
+			<img class ="itemImage" src="images/CQ/items/curseBobFull.png">
 		</div>
 		`;
 	}
