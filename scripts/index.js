@@ -44,6 +44,7 @@ var data = {
 		playerStr: "???",
 		playerAgl: "???", 
 		playerMag: "???",
+		playerSta: "???",
 		playerEss: "???",
 		vrName: "???", vrScore: 0, vrReady: false, vr1: false, vr2: false, vr3: false, vr4: false,
 		exoticVisited: false, candyVisited: false, clothingVisited: false, salonVisited: false, laptopSetup: false, time: "day",
@@ -888,6 +889,7 @@ function updateMenu() {
 	document.getElementById('statScorePlayerSTR').innerHTML = data.story.playerStr;
 	document.getElementById('statScorePlayerAGL').innerHTML = data.story.playerAgl;
 	document.getElementById('statScorePlayerMAG').innerHTML = data.story.playerMag;
+	document.getElementById('statScorePlayerSTA').innerHTML = data.story.playerSta;
 	document.getElementById('statScorePlayerESS').innerHTML = data.story.playerEss;
 }
 
@@ -898,7 +900,7 @@ function changeName(target) {
 			console.log("bodytype: "+data.story.bodytype);
 			switch(data.story.bodytype){
 				case 1:
-					data.story.deityWorshipped = "Asira, Lady of Ash";
+					data.story.deityWorshipped = "The Lady of Ash";
 					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 1;
 					data.story.playerAgl = 0;
@@ -906,7 +908,7 @@ function changeName(target) {
 					data.story.playerEss = 0;
 				break;
 				case 2:
-					data.story.deityWorshipped = "Majiana, The Noble One";
+					data.story.deityWorshipped = "The Noble One";
 					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
 					data.story.playerAgl = 0;
@@ -914,7 +916,7 @@ function changeName(target) {
 					data.story.playerEss = 0;
 				break;
 				case 3:
-					data.story.deityWorshipped = "Twinkus, the Dick King";
+					data.story.deityWorshipped = "The Dick King";
 					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
 					data.story.playerAgl = 1;

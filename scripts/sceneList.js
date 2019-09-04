@@ -54,7 +54,7 @@ function writeScene(scene) {
 				writeText("Despite that, you feel a coldness spread through you for a moment, a shock to your system as you nearly stumble. The cold hovers around your crotch for a moment, before finally disappearing, leaving only a faint emptiness behind as you realize that you've dropped to your knees in front of someone.");
 				writeBig("images/CQ/content/scene001-1.png");
 				writeText("Staring up at her, you have trouble focusing your hazy vision on her almost porcelain-like face. You don’t know why or how, but you somehow know.");
-				writeText("This is Asira, Goddess of Ash.");
+				writeText("She is the Lady of Ash - a Goddess.");
 				writeSpeech("Asira","images/CQ/icons/asira.png","Do you intend to waste that potential of yours? You could achieve a great deal more, <b>become</b> much more.");
 				writeText("She leans forward a bit, her lava-red hair cascading down almost enough to reach you.");
 				writeSpeech("Asira","images/CQ/icons/asira.png","A power beyond your mortal coil. A body as strong and as lasting as stone. But in exchange, a body far more barren. This is the path you have chosen.");
@@ -68,7 +68,7 @@ function writeScene(scene) {
 				writeText("One step leads to another, each one filling your head with whispers of arcane lore just barely too faint to understand, yet undeniably filling your body with more and more energy. The shapes in the ephemeral stone seem to become clearer, and you begin to recognize the constellations in the clouded rocks.");
 				writeText("But as you do, you can feel a pull from deep inside – a desire, a <i>greed</i> that threatens to consume you. Your chest feels like an empty void, reaching out to grab onto anything it can hold onto, to truly <i>know</i> belongs to it.");
 				writeText("The desire causes you to clutch your chest, your vision starting to swim, before you realize that you've arrived at the end of the path and that there's someone seated in front of you. You hear the whispers reach a crescendo around you, and you can understand what they say:");
-				writeText("This is Mistress Majiana, Goddess of Nobility.");
+				writeText("This is the Goddess of Nobility.");
 				writeBig("images/CQ/content/scene001-2.png");
 				writeText("Even while seated, your full height only reaches near her necklace as she shifts her legs and looks down at you, her eyes appraising you chillingly.");
 				writeSpeech("Majiana","images/CQ/icons/majiana.png","A voracious one, hm? Like calls to like, I suppose. Time is short, so I will keep this brief.");
