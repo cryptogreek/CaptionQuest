@@ -5,7 +5,7 @@ function writeScene(scene) {
 			writeText("Caption Quest is an adult CYOA created by [a bunch of fags lol], with code ripped from NoodleJacuzzi's game Human Alteration App (with permission, of course). You can find and keep up with all of HIS work at his master index here:<br>https://noodlejacuzzi.github.io/index.html");
 			writeText("Here you can find all of his other games, and play HAA online without needing to play it on a website like gamcore.");
 			writeText("He has a patreon at https://www.patreon.com/noodlejacuzzi<br>I did steal his code and all (again, with permission), so check him out. Also, he does commissions for whole games in this style, which is fucking bananas. You can also hit his Discord up at NoodleJacuuzi#4120.");
-			writeText("As an additional note, you can click on the title of a window to close it. For example, if you click 'LOGBOOK' on the left there, you can close the new window by clicking anywhere in the 'LOGBOOK' section at the top.");
+			writeText("As an additional note, you can click on the title of a window to close it. For example, if you click 'INVENTORY' on the left there, you can close the new window by clicking anywhere in the 'INVENTORY' section at the top.");
 			writeTransition("prologue", "Start the game");
 			
 			break;
