@@ -899,6 +899,7 @@ function changeName(target) {
 			switch(data.story.bodytype){
 				case 1:
 					data.story.deityWorshipped = "Asira, Lady of Ash";
+					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 1;
 					data.story.playerAgl = 0;
 					data.story.playerMag = 0;
@@ -906,6 +907,7 @@ function changeName(target) {
 				break;
 				case 2:
 					data.story.deityWorshipped = "Majiana, Mistress of Nobility";
+					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
 					data.story.playerAgl = 0;
 					data.story.playerMag = 1;
@@ -913,6 +915,7 @@ function changeName(target) {
 				break;
 				case 3:
 					data.story.deityWorshipped = "Twinkus, the Dick King";
+					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
 					data.story.playerAgl = 1;
 					data.story.playerMag = 0;
