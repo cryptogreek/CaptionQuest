@@ -88,11 +88,11 @@ function writeScene(scene) {
 				writeText("<b>Your new frame comes with a nearly irresistable desire to serve. <i>Dominating during sex is now unbearably difficult.</i></b>");
 				break;
 			}
-			writeTransition("endOfContent", "Awaken to birdsong AND/OR the bustle of the town");
+			writeTransition("endOfContent", "That's all for now");
 			break;
 		}
 		case "endOfContent" : {
-			writeText("That's all for now.");
+			writeText("You clicked me anyway. You monster.");
 			break;
 		}
 		case "goEatBreakfast" : {
