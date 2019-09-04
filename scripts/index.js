@@ -36,6 +36,7 @@ var data = {
 	story: {
 		name: "???", version: 0.8, freeSample: false,
 		currentScene: "start", money: 20, route: "dom", skill: 0, playingGame: false,
+		curseInfertile: 0, curseNarcissus: 0, curseKindness: 0,
 		popRocks: 0, caramelMelts: 0, plugPops: 0, stretchyTaffy: 0, fruitGushers: 0, 
 		vrMachine: false, princessGame: false, zombieGame: false, laptop: false, creamer: false, doll: false, toy: false, horse: false, onahole: false,
 		beautyTicket: false, candyTicket: false, clothingTicket: false, 
@@ -1940,6 +1941,33 @@ function selfImage(img) {
 //Inventory
 function generateInv() {
 	clearInv();
+		if (data.story.curseInfertile == true) {
+		document.getElementById('windowLeft').innerHTML += `
+		<div class = "item">
+			<p class = "itemName">Curse of Infertility</p>
+			<img class ="itemImage" src="images/CQ/items/curseLoa.png">
+		</div>
+		`;
+		document.getElementById('popRocks').innerHTML = data.story.popRocks;
+	}
+		if (data.story.curseNarcissus == true) {
+		document.getElementById('windowLeft').innerHTML += `
+		<div class = "item">
+			<p class = "itemName">Curse of Narcissism</p>
+			<img class ="itemImage" src="images/CQ/items/curseNob.png">
+		</div>
+		`;
+		document.getElementById('popRocks').innerHTML = data.story.popRocks;
+	}
+		if (data.story.curseKindness == true) {
+		document.getElementById('windowLeft').innerHTML += `
+		<div class = "item">
+			<p class = "itemName">Curse of Kindness</p>
+			<img class ="itemImage" src="images/CQ/items/curseBob.png">
+		</div>
+		`;
+		document.getElementById('popRocks').innerHTML = data.story.popRocks;
+	}
 	if (data.story.popRocks > 0) {
 		document.getElementById('windowLeft').innerHTML += `
 		<div class = "item">

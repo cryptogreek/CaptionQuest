@@ -63,6 +63,7 @@ function writeScene(scene) {
 				writeSpeech("Asira","images/CQ/icons/asira.png","When you awaken, my champion, you will bear both my gift and my curse. Use them, and achieve your true potential.")
 				writeText("<b>You have chosen the path of Strength.<i> STR has increased.</i></b>");
 				writeText("<b>You sacrificed your fertility for power.<i> Your cum is now infertile.</i></b>");
+				data.story.curseInfertile = true;
 				break;
 				case 2:
 				writeText("One step leads to another, each one filling your head with whispers of arcane lore just barely too faint to understand, yet undeniably filling your body with more and more energy. The shapes in the ephemeral stone seem to become clearer, and you begin to recognize the constellations in the clouded rocks.");
@@ -78,6 +79,7 @@ function writeScene(scene) {
 				writeSpeech("Majiana","images/CQ/icons/majiana.png","You will be my champion. Your place is above all other creatures but myself. See that <i>everything</i> remembers as such.");
 				writeText("<b>Arcane secrets run through your head. <i>MAG has increased.</i></b>");
 				writeText("<b>You have sacrificed self-restraint for knowledge. <i>Refusing bargains is now nearly impossible.</i></b>");
+				data.story.curseNarcissus = true;
 				break;
 				case 3:
 				writeText("You walk down the purple and black checkered texture that screams of some sort of technical fuck-up, somehow still managing to feel under your soles despite the missing texture of the yellow dick road. The slick feeling of pre-cum that the unseeable cocks are practically pissing out with every step both sickens and arouses you.");
@@ -86,6 +88,7 @@ function writeScene(scene) {
 				writeText("You forget your words, your eyes, your body – you know only that they are Master, and they will watch over you.");
 				writeText("<b>Your frame is smaller, but much easier to control. <i>AGI has increased.</i></b>");
 				writeText("<b>Your new frame comes with a nearly irresistable desire to serve. <i>Dominating during sex is now unbearably difficult.</i></b>");
+				data.story.curseKindness = true;
 				break;
 			}
 			writeTransition("endOfContent", "That's all for now");
