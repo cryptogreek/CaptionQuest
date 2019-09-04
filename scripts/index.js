@@ -912,7 +912,7 @@ function changeName(target) {
 					data.story.playerEss = 0;
 				break;
 				case 3:
-					data.story.deityWorshipped = "Twinkus, Dick King";
+					data.story.deityWorshipped = "Twinkus, the Dick King";
 					data.story.playerStr = 0;
 					data.story.playerAgl = 1;
 					data.story.playerMag = 0;
