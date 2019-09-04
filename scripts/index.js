@@ -906,7 +906,7 @@ function changeName(target) {
 					data.story.playerEss = 0;
 				break;
 				case 2:
-					data.story.deityWorshipped = "The Noble One, Mistress Majiana";
+					data.story.deityWorshipped = "Majiana, The Noble One";
 					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
 					data.story.playerAgl = 0;
