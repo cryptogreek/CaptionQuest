@@ -44,6 +44,7 @@ function writeScene(scene) {
 					Declare your approach
 				</p>
 			`;
+			data.story.playerSta = 10;
 			updateMenu();
 			break;
 		}
