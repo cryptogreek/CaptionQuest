@@ -1942,31 +1942,28 @@ function selfImage(img) {
 function generateInv() {
 	clearInv();
 		if (data.story.curseInfertile == true) {
-		document.getElementById('windowLeft').innerHTML += `
+		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Infertility</p>
 			<img class ="itemImage" src="images/CQ/items/curseLoa.png">
 		</div>
 		`;
-		document.getElementById('popRocks').innerHTML = data.story.popRocks;
 	}
 		if (data.story.curseNarcissus == true) {
-		document.getElementById('windowLeft').innerHTML += `
+		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Narcissism</p>
 			<img class ="itemImage" src="images/CQ/items/curseNob.png">
 		</div>
 		`;
-		document.getElementById('popRocks').innerHTML = data.story.popRocks;
 	}
 		if (data.story.curseKindness == true) {
-		document.getElementById('windowLeft').innerHTML += `
+		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Kindness</p>
 			<img class ="itemImage" src="images/CQ/items/curseBob.png">
 		</div>
 		`;
-		document.getElementById('popRocks').innerHTML = data.story.popRocks;
 	}
 	if (data.story.popRocks > 0) {
 		document.getElementById('windowLeft').innerHTML += `
