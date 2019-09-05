@@ -36,7 +36,7 @@ var data = {
 	story: {
 		name: "???", version: 0.8, freeSample: false,
 		currentScene: "start", money: 20, route: "dom", skill: 0, playingGame: false,
-		curseInfertile: false, curseNarcissus: false, curseKindness: false, curseSubmission: false;
+		curseInfertile: false, curseNarcissus: false, curseKindness: false, curseSubmission: false,
 		popRocks: 0, caramelMelts: 0, plugPops: 0, stretchyTaffy: 0, fruitGushers: 0, 
 		vrMachine: false, princessGame: false, zombieGame: false, laptop: false, creamer: false, doll: false, toy: false, horse: false, onahole: false,
 		beautyTicket: false, candyTicket: false, clothingTicket: false, 
