@@ -26,7 +26,8 @@ function writeScene(scene) {
 				document.getElementById('output').innerHTML += `
 					<button type="button" onclick="changeBody(1)">Ashen Road</button>
 					<button type="button" onclick="changeBody(2)">Arcane Road</button>
-					<button type="button" onclick="changeBody(3)">SFM Road</button>
+					<button type="button" onclick="changeBody(3)">Jagged Road</button>
+					<button type="button" onclick="changeBody(4)">SFM Road</button>
 					<p>Current deity: <span id = 'bodytype'>The Lady of Ash.</span></p>
 				`;
 			}
@@ -82,6 +83,9 @@ function writeScene(scene) {
 				data.story.curseNarcissus = true;
 				break;
 				case 3:
+
+				break;
+				case 4:
 				writeText("You walk down the purple and black checkered texture that screams of some sort of technical fuck-up, somehow still managing to feel under your soles despite the missing texture of the yellow dick road. The slick feeling of pre-cum that the unseeable cocks are practically pissing out with every step both sickens and arouses you.");
 				writeText("You start picking up speed, but each step causes your mind to get hazier and hazier as you imagine what the road would really look like, how it would feel to be a part of it… Your body feels smaller as you move, but more lithe and easier to control. By the time you reach the end of the path, your dick is harder than it's ever been and your mouth feels hellishly-empty.");
 				writeText("Across from you, you know there is someone. You’re not sure who it is, or what they’re doing here. You only know that they are above you, and you <i>belong</i> below them.");

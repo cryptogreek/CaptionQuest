@@ -918,6 +918,13 @@ function changeName(target) {
 					data.story.playerEss = 0;
 				break;
 				case 3:
+					data.story.deityWorshipped = "CaptionQuest";
+					console.log("deity is "+data.story.deityWorshipped);
+					data.story.playerStr = 0;
+					data.story.playerAgl = 1;
+					data.story.playerMag = 0;
+					data.story.playerEss = 0;
+				case 4:
 					data.story.deityWorshipped = "The Dick King";
 					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
@@ -1020,14 +1027,23 @@ function changeBody(n) {
 			document.getElementById('targetDeity').innerHTML = `
 			<p>The second road seems to made of some sort of ephemeral, half-there stone, feeling more like cloth as you walk along it than anything else. There's power to it, but there's a pull as well - an impulse towards a powerful greed that only grows stronger the further you start to go.</p>
 			<p>The energy that flows from the shimmering stone fills your body more and more with each step, the sounds of the arcane coursing through your head as it does.</p>
-			<p>Every step makes an image in your mind a little bit clearer - that of a woman seated upon an ornate throne, staring down at you with glowing eyes.
+			<p>Every step makes an image in your mind a little bit clearer - that of a woman seated upon an ornate throne, staring down at you with glowing eyes.</p>
 			<p>If this is the path you choose, then step forward and declare your name, Magister.</p>
 			`;
 		break;
 		case 3:
+			document.getElementById('bodytype').innerHTML = "King of Strife";
+			document.getElementById('targetDeity').innerHTML = `
+			<p>The third road looks like it's made of rough, jagged stone, but is surprisingly gentle on your feet as you walk. It's still a bit uncomfortable, but it seems to get easier when you move faster. At the same time, though, you can't help but feel pulled towards the pain, unable to look away from it.</p>
+			<p>The stones have an energy that seems to almost carry you along, getting faster and more agile with every step, but becoming more and more unable to steer your mind away from easing the pain of others.</p>
+			<p>Every step makes an image in your mind a little bit clearer - that of a tall, dark-robed man looking down with scarlet eyes.</p>
+			<p>If this is the path you choose, then step forward and declare your name, Alleviator.</p>
+			`;
+		break;
+		case 4:
 			document.getElementById('bodytype').innerHTML = "The Dick King";
 			document.getElementById('targetDeity').innerHTML = `
-			<p>The third road is a glitchy fucking mess and is probably made of dicks or something. They bounce and waver, feeling harder than any stone underneath your heel as you get aroused at the thought of someone trampling on your dick just like this.</p>
+			<p>The fourth road is a glitchy fucking mess and is probably made of dicks or something. They bounce and waver, feeling harder than any stone underneath your heel as you get aroused at the thought of someone trampling on your dick just like this.</p>
 			<p>You can feel your body becoming more lithe and dextrous with each step forward, but you can also feel your mind's dominance slowly eroding along the way.</p>
 			<p>Every step makes an image in your mind a little bit clearer - that of a fat dick that you wanna suck or something, iunno. Despite what my other stuff suggests, I'm more of a comedy writer than anything else.</p>
 			<p>If this is the path you choose, then step forward and declare your name, Trappy Boi.</p>
