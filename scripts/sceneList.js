@@ -87,7 +87,7 @@ function writeScene(scene) {
 				writeText("But as you do, you feel a pang through your skull – a twisting pain stabbing into your head as images of other people running across this path, of the pain that those who weren't fast enough had to endure, course through your mind. The desire to grab them, push them forward, <i>save them</i> causes you to stumble, slamming hard into the ground and rolling forward across ground thats smoother than you expected.");
 				writeText("When you come to a halt, you look up to see <b><i>him.</i></b>");
 				writeText("The King of Strife.");
-				writeBig("images/CQ/content/scene001-3");
+				writeBig("images/CQ/content/scene001-3.png");
 				writeText("Sunken eyes stare harshly down at you, standing at easily three times your height as shifts his staff.");
 				writeSpeech("King of Strife","images/CQ/icons/bob.png","Neither you, nor I, have any reason to waste time with details. You did not come here for a <i>lecture</i>, but for <i>power</i>. Receive my blessing, become the champion of the God of Strife, and go forth.");
 				writeText("His staff slowly shifts towards you, but his scowl deepens.");
