@@ -924,6 +924,7 @@ function changeName(target) {
 					data.story.playerAgl = 1;
 					data.story.playerMag = 0;
 					data.story.playerEss = 0;
+				break;
 				case 4:
 					data.story.deityWorshipped = "The Dick";
 					console.log("deity is "+data.story.deityWorshipped);
@@ -1038,6 +1039,15 @@ function changeBody(n) {
 			<p>The stones have an energy that seems to almost carry you along, getting faster and more agile with every step, but becoming more and more unable to steer your mind away from easing the pain of others.</p>
 			<p>Every step makes an image in your mind a little bit clearer - that of a tall, dark-robed man looking down with scarlet eyes.</p>
 			<p>If this is the path you choose, then step forward and declare your name, Alleviator.</p>
+			`;
+		break;
+		case 4:
+			document.getElementById('bodytype').innerHTML = "The Dick";
+			document.getElementById('targetDeity').innerHTML = `
+			<p>The fourth road is a glitchy fucking mess and is probably made of dicks or something. They bounce and waver, feeling harder than any stone underneath your heel as you get aroused at the thought of someone trampling on your dick just like this.</p>
+			<p>You can feel your body becoming more lithe and dextrous with each step forward, but you can also feel your mind's dominance slowly eroding along the way.</p>
+			<p>Every step makes an image in your mind a little bit clearer - that of a fat dick that you wanna suck or something, iunno. Despite what my other stuff suggests, I'm more of a comedy writer than anything else.</p>
+			<p>If this is the path you choose, then step forward and declare your name, Trappy Boi.</p>
 			`;
 		break;
 	}
