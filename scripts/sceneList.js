@@ -94,6 +94,7 @@ function writeScene(scene) {
 				writeSpeech("King of Strife","images/CQ/icons/bob.png","But know this. My disciples do not abide by <i>needless</i> suffering, and the cost of this power is that you will not stand idly in the face of it either.");
 				writeText("The world begins to go dark, his staff hovering just millimeters from the top of your head.");
 				writeSpeech("King of Strife","images/CQ/icons/bob.png","Good luck, champion. Now, show us your worth in the waking world.");
+				data.story.curseKindness = true;
 				break;
 				case 4:
 				writeText("You walk down the purple and black checkered texture that screams of some sort of technical fuck-up, somehow still managing to feel under your soles despite the missing texture of the yellow dick road. The slick feeling of pre-cum that the unseeable cocks are practically pissing out with every step both sickens and arouses you.");
@@ -102,7 +103,7 @@ function writeScene(scene) {
 				writeText("You forget your words, your eyes, your body – you know only that they are Master, and they will watch over you.");
 				writeText("<b>Your frame is smaller, but much easier to control. <i>AGI has increased.</i></b>");
 				writeText("<b>Your new frame comes with a nearly irresistable desire to serve. <i>Dominating during sex is now unbearably difficult.</i></b>");
-				data.story.curseKindness = true;
+				data.story.curseSubmission = true;
 				break;
 			}
 			writeTransition("endOfContent", "That's all for now");

@@ -36,7 +36,7 @@ var data = {
 	story: {
 		name: "???", version: 0.8, freeSample: false,
 		currentScene: "start", money: 20, route: "dom", skill: 0, playingGame: false,
-		curseInfertile: 0, curseNarcissus: 0, curseKindness: 0,
+		curseInfertile: false, curseNarcissus: false, curseKindness: false, curseSubmission: false;
 		popRocks: 0, caramelMelts: 0, plugPops: 0, stretchyTaffy: 0, fruitGushers: 0, 
 		vrMachine: false, princessGame: false, zombieGame: false, laptop: false, creamer: false, doll: false, toy: false, horse: false, onahole: false,
 		beautyTicket: false, candyTicket: false, clothingTicket: false, 
@@ -918,7 +918,7 @@ function changeName(target) {
 					data.story.playerEss = 0;
 				break;
 				case 3:
-					data.story.deityWorshipped = "CaptionQuest";
+					data.story.deityWorshipped = "King of Strife";
 					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
 					data.story.playerAgl = 1;
