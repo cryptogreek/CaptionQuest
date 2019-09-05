@@ -926,7 +926,7 @@ function changeName(target) {
 					data.story.playerEss = 0;
 				break;
 				case 4:
-					data.story.deityWorshipped = "The Dick";
+					data.story.deityWorshipped = "The Dick King";
 					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
 					data.story.playerAgl = 1;
@@ -1042,7 +1042,7 @@ function changeBody(n) {
 			`;
 		break;
 		case 4:
-			document.getElementById('bodytype').innerHTML = "The Dick";
+			document.getElementById('bodytype').innerHTML = "The Dick King";
 			document.getElementById('targetDeity').innerHTML = `
 			<p>The fourth road is a glitchy fucking mess and is probably made of dicks or something. They bounce and waver, feeling harder than any stone underneath your heel as you get aroused at the thought of someone trampling on your dick just like this.</p>
 			<p>You can feel your body becoming more lithe and dextrous with each step forward, but you can also feel your mind's dominance slowly eroding along the way.</p>
