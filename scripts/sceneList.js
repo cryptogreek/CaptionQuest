@@ -54,14 +54,14 @@ function writeScene(scene) {
 				writeText("You can feel yourself getting stronger, your body almost feeling like it's growing with each step, yet somehow getting lighter. You can see your exposed body's musculature as you feel a heat soaking into your skin as the distant sun seems to turn orange and much, much brighter.");
 				writeText("Despite that, you feel a coldness spread through you for a moment, a shock to your system as you nearly stumble. The cold hovers around your crotch for a moment, before finally disappearing, leaving only a faint emptiness behind as you realize that you've dropped to your knees in front of someone.");
 				writeBig("images/CQ/content/scene001-1.png");
-				writeText("Staring up at her, you have trouble focusing your hazy vision on her almost porcelain-like face. You don’t know why or how, but you somehow know.");
+				writeText("Staring up at her, you have trouble focusing your hazy vision on her almost porcelain-like face. You don't know why or how, but you somehow know.");
 				writeText("She is the Lady of Ash - a Goddess.");
-				writeSpeech("Asira","images/CQ/icons/asira.png","Do you intend to waste that potential of yours? You could achieve a great deal more, <b>become</b> much more.");
+				writeSpeech("Lady of Ash","images/CQ/icons/asira.png","Do you intend to waste that potential of yours? You could achieve a great deal more, <b>become</b> much more.");
 				writeText("She leans forward a bit, her lava-red hair cascading down almost enough to reach you.");
-				writeSpeech("Asira","images/CQ/icons/asira.png","A power beyond your mortal coil. A body as strong and as lasting as stone. But in exchange, a body far more barren. This is the path you have chosen.");
+				writeSpeech("Lady of Ash","images/CQ/icons/asira.png","A power beyond your mortal coil. A body as strong and as lasting as stone. But in exchange, a body far more barren. This is the path you have chosen.");
 				writeText("You nod numbly, still unable to think straight, as everything starts to fade bit-by-bit.");
 				writeText("After a moment, her eyes and the faint silhouette of her hair are all that remains, but her voice still comes out just as clearly.")
-				writeSpeech("Asira","images/CQ/icons/asira.png","When you awaken, my champion, you will bear both my gift and my curse. Use them, and achieve your true potential.")
+				writeSpeech("Lady of Ash","images/CQ/icons/asira.png","When you awaken, my champion, you will bear both my gift and my curse. Use them, and achieve your true potential.")
 				writeText("<b>You have chosen the path of Strength.<i> STR has increased.</i></b>");
 				writeText("<b>You sacrificed your fertility for power.<i> Your cum is now infertile.</i></b>");
 				data.story.curseInfertile = true;
@@ -70,25 +70,35 @@ function writeScene(scene) {
 				writeText("One step leads to another, each one filling your head with whispers of arcane lore just barely too faint to understand, yet undeniably filling your body with more and more energy. The shapes in the ephemeral stone seem to become clearer, and you begin to recognize the constellations in the clouded rocks.");
 				writeText("But as you do, you can feel a pull from deep inside – a desire, a <i>greed</i> that threatens to consume you. Your chest feels like an empty void, reaching out to grab onto anything it can hold onto, to truly <i>know</i> belongs to it.");
 				writeText("The desire causes you to clutch your chest, your vision starting to swim, before you realize that you've arrived at the end of the path and that there's someone seated in front of you. You hear the whispers reach a crescendo around you, and you can understand what they say:");
-				writeText("This is the Goddess of Nobility.");
+				writeText("This is the The Noble One, Goddess of Nobility.");
 				writeBig("images/CQ/content/scene001-2.png");
 				writeText("Even while seated, your full height only reaches near her necklace as she shifts her legs and looks down at you, her eyes appraising you chillingly.");
-				writeSpeech("Majiana","images/CQ/icons/majiana.png","A voracious one, hm? Like calls to like, I suppose. Time is short, so I will keep this brief.");
+				writeSpeech("The Noble One","images/CQ/icons/majiana.png","A voracious one, hm? Like calls to like, I suppose. Time is short, so I will keep this brief.");
 				writeText("She leans back in her chair, her eyes narrowing at you for a moment.");
-				writeSpeech("Majiana","images/CQ/icons/majiana.png","I have need for a champion, one that can use my knowledge of the arcane and who is more… <i>open</i> to the sorts of propositions those of proper status should be eager to take. And seeing as you walked the full path to this place, I assume our desires align.");
+				writeSpeech("The Noble One","images/CQ/icons/majiana.png","I have need for a champion, one that can use my knowledge of the arcane and who is more… <i>open</i> to the sorts of propositions those of proper status should be eager to take. And seeing as you walked the full path to this place, I assume our desires align.");
 				writeText("The smallest quirk of a smile graces her features for a moment, but it's quickly replaced by a stony look, even as the world begins to fade away.");
-				writeSpeech("Majiana","images/CQ/icons/majiana.png","You will be my champion. Your place is above all other creatures but myself. See that <i>everything</i> remembers as such.");
+				writeSpeech("The Noble One","images/CQ/icons/majiana.png","You will be my champion. Your place is above all other creatures but myself. See that <i>everything</i> remembers as such.");
 				writeText("<b>Arcane secrets run through your head. <i>MAG has increased.</i></b>");
 				writeText("<b>You have sacrificed self-restraint for knowledge. <i>Refusing bargains is now nearly impossible.</i></b>");
 				data.story.curseNarcissus = true;
 				break;
 				case 3:
-
+				writeText("Within seconds, rather than walking, you're practically jogging down the jagged path, moving faster and faster as the road itself seems to push you along and fill your body with a lightness and energy like nothing you've ever felt. Moving with dexterous grace, you bound down the path with incredible agility.");
+				writeText("But as you do, you feel a pang through your skull – a twisting pain stabbing into your head as images of other people running across this path, of the pain that those who weren't fast enough had to endure, course through your mind. The desire to grab them, push them forward, <i>save them</i> causes you to stumble, slamming hard into the ground and rolling forward across ground thats smoother than you expected.");
+				writeText("When you come to a halt, you look up to see <b><i>him.</i></b>");
+				writeText("The King of Strife.");
+				writeBig("images/CQ/conten/scene001-3");
+				writeText("Sunken eyes stare harshly down at you, standing at easily three times your height as shifts his staff.");
+				writeSpeech("King of Strife","images/CQ/icons/bob.png","Neither you, nor I, have any reason to waste time with details. You did not come here for a <i>lecture</i>, but for <i>power</i>. Receive my blessing, become the champion of the God of Strife, and go forth.");
+				writeText("His staff slowly shifts towards you, but his scowl deepens.");
+				writeSpeech("King of Strife","images/CQ/icons/bob.png","But know this. My disciples do not abide by <i>needless</i> suffering, and the cost of this power is that you will not stand idly in the face of it either.");
+				writeText("The world begins to go dark, his staff hovering just millimeters from the top of your head.");
+				writeSpeech("King of Strife","images/CQ/icons/bob.png","Good luck, champion. Now, show us your worth in the waking world.");
 				break;
 				case 4:
 				writeText("You walk down the purple and black checkered texture that screams of some sort of technical fuck-up, somehow still managing to feel under your soles despite the missing texture of the yellow dick road. The slick feeling of pre-cum that the unseeable cocks are practically pissing out with every step both sickens and arouses you.");
 				writeText("You start picking up speed, but each step causes your mind to get hazier and hazier as you imagine what the road would really look like, how it would feel to be a part of it… Your body feels smaller as you move, but more lithe and easier to control. By the time you reach the end of the path, your dick is harder than it's ever been and your mouth feels hellishly-empty.");
-				writeText("Across from you, you know there is someone. You’re not sure who it is, or what they’re doing here. You only know that they are above you, and you <i>belong</i> below them.");
+				writeText("Across from you, you know there is someone. You're not sure who it is, or what they're doing here. You only know that they are above you, and you <i>belong</i> below them.");
 				writeText("You forget your words, your eyes, your body – you know only that they are Master, and they will watch over you.");
 				writeText("<b>Your frame is smaller, but much easier to control. <i>AGI has increased.</i></b>");
 				writeText("<b>Your new frame comes with a nearly irresistable desire to serve. <i>Dominating during sex is now unbearably difficult.</i></b>");
