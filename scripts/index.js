@@ -1040,15 +1040,6 @@ function changeBody(n) {
 			<p>If this is the path you choose, then step forward and declare your name, Alleviator.</p>
 			`;
 		break;
-		case 4:
-			document.getElementById('bodytype').innerHTML = "The Dick";
-			document.getElementById('targetDeity').innerHTML = `
-			<p>The fourth road is a glitchy fucking mess and is probably made of dicks or something. They bounce and waver, feeling harder than any stone underneath your heel as you get aroused at the thought of someone trampling on your dick just like this.</p>
-			<p>You can feel your body becoming more lithe and dextrous with each step forward, but you can also feel your mind's dominance slowly eroding along the way.</p>
-			<p>Every step makes an image in your mind a little bit clearer - that of a fat dick that you wanna suck or something, iunno. Despite what my other stuff suggests, I'm more of a comedy writer than anything else.</p>
-			<p>If this is the path you choose, then step forward and declare your name, Trappy Boi.</p>
-			`;
-		break;
 	}
 }
 
