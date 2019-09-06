@@ -36,17 +36,17 @@ var data = {
 	story: {
 		name: "???", version: 0.8, freeSample: false,
 		currentScene: "start", money: 20, route: "dom", skill: 0, playingGame: false,
+
 		curseInfertile: false, curseNarcissus: false, curseKindness: false, curseSubmission: false,
+		taintedSlippery: false,
+
 		popRocks: 0, caramelMelts: 0, plugPops: 0, stretchyTaffy: 0, fruitGushers: 0, 
 		vrMachine: false, princessGame: false, zombieGame: false, laptop: false, creamer: false, doll: false, toy: false, horse: false, onahole: false,
 		beautyTicket: false, candyTicket: false, clothingTicket: false, 
 		bodytype: 0, chestSize: 0, buttSize: 0, lipSize: 0, clothing: 1, underwear: 1,
+
 		deityWorshipped: "???",
-		playerStr: "???",
-		playerAgl: "???", 
-		playerMag: "???",
-		playerSta: "???",
-		playerEss: "???",
+		playerStr: "???", playerAgl: "???", playerMag: "???", playerSta: "???", playerEss: "???",
 		vrName: "???", vrScore: 0, vrReady: false, vr1: false, vr2: false, vr3: false, vr4: false,
 		exoticVisited: false, candyVisited: false, clothingVisited: false, salonVisited: false, laptopSetup: false, time: "day",
 	},
@@ -1981,6 +1981,14 @@ function generateInv() {
 		<div class = "item">
 			<p class = "itemName">Curse of Kindness</p>
 			<img class ="itemImage" src="images/CQ/items/curseBobFull.png">
+		</div>
+		`;
+	}
+		if (data.story.curseSubmission == true) {
+		document.getElementById('windowLeft').innerHTML += `
+		<div class = "item">
+			<p class = "itemName">Curse of Submission</p>
+			<img class ="itemImage" src="images/CQ/items/curseLoaFull.png">
 		</div>
 		`;
 	}

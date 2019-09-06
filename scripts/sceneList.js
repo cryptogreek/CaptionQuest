@@ -180,6 +180,7 @@ function writeScene(scene) {
 					writeText("<b>AGI test <i>passed.</i></b>");
 				}
 				else{
+					writeText("Everything seems to slow down for just a moment, but it's enough.");
 					writeText("<b>AGI test <i><strike>failed</strike>passed.</i>");	
 				}
 				writeText("You barely manage to dodge to the side, something small barely able to wrap its hands around your ankle as you turn.");
@@ -325,6 +326,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "forestKoboldComplete" : {
+			data.story.taintedSlippery = true;
 			writeText("This isn't done yet.");
 			break;
 		}
