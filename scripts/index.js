@@ -1985,10 +1985,18 @@ function generateInv() {
 		`;
 	}
 		if (data.story.curseSubmission == true) {
-		document.getElementById('windowLeft').innerHTML += `
+		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Submission</p>
-			<img class ="itemImage" src="images/CQ/items/curseLoaFull.png">
+			<img class ="itemImage" src="images/CQ/items/kobold1.png" title="This prevents you from being dominant.">
+		</div>
+		`;
+	}
+		if (data.story.taintedSlippery == true) {
+		document.getElementById('windowLeft').innerHTML += `
+		<div class = "item">
+			<p class = "itemName">Slippery Essence</p>
+			<img class ="itemImage" src="images/CQ/items/kobold1.png">
 		</div>
 		`;
 	}
