@@ -75,7 +75,7 @@ function writeScene(scene) {
 				writeText("Even while seated, your full height only reaches near her necklace as she shifts her legs and looks down at you, her eyes appraising you chillingly.");
 				writeSpeech("The Noble One","images/CQ/icons/majiana.png","A voracious one, hm? Like calls to like, I suppose. Time is short, so I will keep this brief.");
 				writeText("She leans back in her chair, her eyes narrowing at you for a moment.");
-				writeSpeech("The Noble One","images/CQ/icons/majiana.png","I have need for a champion, one that can use my knowledge of the arcane and who is more… <i>open</i> to the sorts of propositions those of proper status should be eager to take. And seeing as you walked the full path to this place, I assume our desires align.");
+				writeSpeech("The Noble One","images/CQ/icons/majiana.png","I have need for a champion, one that can use my knowledge of the arcane and who is more... <i>open</i> to the sorts of propositions those of proper status should be eager to take. And seeing as you walked the full path to this place, I assume our desires align.");
 				writeText("The smallest quirk of a smile graces her features for a moment, but it's quickly replaced by a stony look, even as the world begins to fade away.");
 				writeSpeech("The Noble One","images/CQ/icons/majiana.png","You will be my champion. Your place is above all other creatures but myself. See that <i>everything</i> remembers as such.");
 				writeText("<b>Arcane secrets run through your head. <i>MAG has increased.</i></b>");
@@ -98,9 +98,9 @@ function writeScene(scene) {
 				break;
 				case 4:
 				writeText("You walk down the purple and black checkered texture that screams of some sort of technical fuck-up, somehow still managing to feel under your soles despite the missing texture of the yellow dick road. The slick feeling of pre-cum that the unseeable cocks are practically pissing out with every step both sickens and arouses you.");
-				writeText("You start picking up speed, but each step causes your mind to get hazier and hazier as you imagine what the road would really look like, how it would feel to be a part of it… Your body feels smaller as you move, but more lithe and easier to control. By the time you reach the end of the path, your dick is harder than it's ever been and your mouth feels hellishly-empty.");
+				writeText("You start picking up speed, but each step causes your mind to get hazier and hazier as you imagine what the road would really look like, how it would feel to be a part of it... Your body feels smaller as you move, but more lithe and easier to control. By the time you reach the end of the path, your dick is harder than it's ever been and your mouth feels hellishly-empty.");
 				writeText("Across from you, you know there is someone. You're not sure who it is, or what they're doing here. You only know that they are above you, and you <i>belong</i> below them.");
-				writeText("You forget your words, your eyes, your body – you know only that they are Master, and they will watch over you.");
+				writeText("You forget your words, your eyes, your body - you know only that they are Master, and they will watch over you.");
 				writeText("<b>Your frame is smaller, but much easier to control. <i>AGI has increased.</i></b>");
 				writeText("<b>Your new frame comes with a nearly irresistable desire to serve. <i>Dominating during sex is now unbearably difficult.</i></b>");
 				data.story.curseSubmission = true;

@@ -1964,7 +1964,10 @@ function generateInv() {
 		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Infertility</p>
-			<img class ="itemImage" src="images/CQ/items/curseLoaFull.png">
+			<div class ="tooltip">
+				<img class ="itemImage" src="images/CQ/items/curseLoaFull.png">
+				<span class ="tooltiptext">The curse of the Lady of Ash. It renders you completely infertile, making it impossible to impregnate (or be impregnated by) anyone.</span>
+			</div>
 		</div>
 		`;
 	}
@@ -1972,7 +1975,10 @@ function generateInv() {
 		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Narcissism</p>
-			<img class ="itemImage" src="images/CQ/items/curseNobFull.png">
+			<div class ="tooltip">
+				<img class ="itemImage" src="images/CQ/items/curseNobFull.png">
+				<span class ="tooltiptext">The curse of The Noble One. It prevents you from turning down reasonable bribes or contracts.</span>
+			</div>
 		</div>
 		`;
 	}
@@ -1980,7 +1986,10 @@ function generateInv() {
 		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Kindness</p>
-			<img class ="itemImage" src="images/CQ/items/curseBobFull.png">
+			<div class ="tooltip">
+				<img class ="itemImage" src="images/CQ/items/curseBobFull.png">
+				<span class ="tooltiptext">The curse of the King of Strife. It prevents you from ignoring the needless suffering of others, no matter who they are.</span>
+			</div>
 		</div>
 		`;
 	}
@@ -1988,7 +1997,10 @@ function generateInv() {
 		document.getElementById('windowRight').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Curse of Submission</p>
-			<img class ="itemImage" src="images/CQ/items/kobold1.png" title="This prevents you from being dominant.">
+			<div class ="tooltip">
+				<img class ="itemImage" src="images/CQ/items/kobold1.jpg">
+				<span class ="tooltiptext">The curse of Twinkus, Deity of Submission. It prevents you from being dominant during most sexual encounters.</span>
+			</div>
 		</div>
 		`;
 	}
@@ -1996,7 +2008,10 @@ function generateInv() {
 		document.getElementById('windowLeft').innerHTML += `
 		<div class = "item">
 			<p class = "itemName">Slippery Essence</p>
-			<img class ="itemImage" src="images/CQ/items/kobold1.png">
+			<div class="tooltip">
+				<img class ="itemImage" src="images/CQ/items/kobold1.jpg">
+				<span class ="tooltiptext">This Tainted Essence makes sure you're always <i>just</i> slick enough to squeeze through tight passages, sexual or otherwise... Unless you're grabbed or blocked by people, oddly enough.</span>
+			</div>
 		</div>
 		`;
 	}
