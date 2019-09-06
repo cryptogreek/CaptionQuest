@@ -140,7 +140,7 @@ function writeScene(scene) {
 			writeText("You set-up camp last night pretty quickly, staying a bit closer to the river than you'd really meant to - you must've been more tired from the day's journey than you thought. Still, you weren't jumped in your sleep by anything (or anyone), so it should be fine this time.");
 			writeText("Still, packing up camp is sooner, rather than later, is probably for the best. If you're waking up, there's no telling what else is coming down to the river for a morning drink.");
 			writeText("While you're stowing the tent and rolling up your sleeping bag, you think about where you should go next.");
-			writeTransition("forestKobold", "Walk through the forest");
+			writeTransition("forestKobold", "Walk through the forest [-1 STA]");
 			writeTransition("riverUnknown", "Follow the river [BROKEN]");
 			writeTransition("pathUnknown", "Take the worn path [BROKEN]");
 			break;
@@ -148,6 +148,8 @@ function writeScene(scene) {
 
 
 		case "forestKobold" : {
+			data.story.playerSta -=1;
+			updateMenu();
 			if(data.story.playerAgl > 0){
 				writeText("After you've finished putting away everything, you grab your stuff and walk through the gaps between the trees, carefully watching your footing as you do. You have a bit of trouble at first, but you get used to it quickly and start making good time.");
 			}
@@ -215,8 +217,6 @@ function writeScene(scene) {
 			writeText("It doesn't hurt her or anything, but it makes sure you get paid. Plus, the Essence of certain sexually-charged creatures can often have additional effects...");
 			writeText("Overall, though, you're pretty spent. It's probably best that you head to the guild-hall, turn in the quest, and lay back in bed after a job well-fucked.");
 			data.story.taintedSlippery = true;
-			data.story.playerSta -= 1;
-			console.log("sta is "+data.story.playerSta);
 			writeTransition("forestKoboldComplete", "Head to the guild hall and get paid");
 			break;
 		}
@@ -253,8 +253,6 @@ function writeScene(scene) {
 			writeText("It doesn't hurt her or anything, but it makes sure you get paid. Plus, the Essence of certain sexually-charged creatures can often have additional effects...");
 			writeText("Overall, though, you're pretty spent. It's probably best that you head to the guild-hall, turn in the quest, and lay back in bed after a job well-fucked.");
 			data.story.taintedSlippery = true;
-			data.story.playerSta -= 1;
-			console.log("sta is "+data.story.playerSta);
 			writeTransition("forestKoboldComplete", "Head to the guild hall and get paid");
 			break;
 		}
@@ -361,8 +359,6 @@ function writeScene(scene) {
 			writeText("It doesn't hurt her or anything, but it makes sure you get paid. Plus, the Essence of certain sexually-charged creatures can often have additional effects...");
 			writeText("Overall, though, you're pretty spent. It's probably best that you head to the guild-hall, turn in the quest, and lay back in bed after a job well-fucked.");
 			data.story.taintedSlippery = true;
-			data.story.playerSta -= 1;
-			console.log("sta is "+data.story.playerSta);
 			writeTransition("forestKoboldComplete", "Head to the guild hall and get paid");
 			break;
 		}
@@ -393,8 +389,6 @@ function writeScene(scene) {
 			writeText("On the downside, even in the evening, there's still people who might see you in the streets...<br>");
 			writeText("<b>CryptoGreek here. Writing the full-on sex scene with all of those fetishes would take forever so, unless someone finally starts commissioning my short-story-writing again, I'll leave it there. Besides, this is a joke path anyway. I mean, this is a porn game. Did you really think you could talk the horny kobold into a convent or something? Stepfordization ain't my fetish, man.</b>");
 			data.story.taintedSlippery = true;
-			data.story.playerSta -= 1;
-			console.log("sta is "+data.story.playerSta);
 			writeTransition("forestKoboldComplete", "Sneak home shamefully, rinse the sexual fluids off, and turn in the quest");
 			break;
 		}
@@ -405,8 +399,6 @@ function writeScene(scene) {
 			writeText("Placing your hand over her, you can feel part of her energy hovering loosely inside of her. You do need proof of the encounter, after all, so you draw out a fraction of her spiritual essence, feeling it merge with you.");
 			writeText("With that done, you could probably go to the local guild-hall to confirm that the job's finished, on the other hand, you're not even sure you can stand right now...");
 			data.story.taintedSlippery = true;
-			data.story.playerSta -= 1;
-			console.log("sta is "+data.story.playerSta);
 			writeTransition("forestKoboldComplete", "Head to the guild hall and get paid");
 			writeTransition("stayAWhile", "Sleep beside the kobold for a little bit longer");
 			break;
