@@ -176,7 +176,12 @@ function writeScene(scene) {
 		}
 		case "forestKoboldAgiWin" : {
 			writeText("Suddenly, there's a rustling behind you.");
+			if(data.story.playerAgl>0){
 				writeText("<b>AGI test <i>passed.</i></b>");
+			}
+			else{
+				writeText("<b>AGI test <i><strike>failed</strike>passed.</i>");	
+			}
 				writeText("You barely manage to dodge to the side, something small barely able to wrap its hands around your ankle as you turn.");
 				writeText("Unfortunately for the creature, you're easily able to crouch down and grab it from your position, securing it tightly.");
 				writeText("Or, securing <i>her</i>, you should say. Getting a strong hold on her meant grabbing near center-mass, and the lizard-girl is a little... <i>bottom-heavy.</i>");
