@@ -49,6 +49,7 @@ var data = {
 		playerStr: "???", playerAgl: "???", playerMag: "???", playerSta: "???", playerEss: "???",
 		vrName: "???", vrScore: 0, vrReady: false, vr1: false, vr2: false, vr3: false, vr4: false,
 		exoticVisited: false, candyVisited: false, clothingVisited: false, salonVisited: false, laptopSetup: false, time: "day",
+		kobold1: false, mothman1: false,
 	},
 	clothingArray: [
 		{name: "Nothing", image: "scripts/gamefiles/none.png", lewd: true, category: "none", owned: true, description: "nothing."}, 

@@ -141,13 +141,65 @@ function writeScene(scene) {
 			writeText("Still, packing up camp is sooner, rather than later, is probably for the best. If you're waking up, there's no telling what else is coming down to the river for a morning drink.");
 			writeText("While you're stowing the tent and rolling up your sleeping bag, you think about where you should go next.");
 			writeTransition("forestKobold", "Walk through the forest [-1 STA]");
-			writeTransition("riverUnknown", "Follow the river [BROKEN]");
-			writeTransition("pathUnknown", "Take the worn path [BROKEN]");
+			writeTransition("riverUnknown", "Follow the river [-1 STA] [BROKEN]");
+			writeTransition("pathUnknown", "Take the old, worn path [-1 STA] [BROKEN]");
+			writeTransition("goToGuildHall", "Go back to the Guild Hall [BROKEN]");
 			break;
 		}
-
-
+		case "goToGuildHall" : {
+			writeText("You decide to head to the guild hall in the nearby town. Roughing it in the woods isn't too much of a problem, but it's not like you can get a solid income out here. A new set of requests have probably been put up, too, so it'll make for a good opportunity to look at some jobs.");
+			if(data.story.curseNarcissus){
+				writeText("Fortunately, you can relax while walking there - the well-used path has a few magical inscriptions made by other followers of your new patron, The Noble One. It serves to ward against most weaker creatures, and the ones that could break past the wards don't usually come to small towns like these.");
+			}
+			else{
+				writeText("Fortunately, you can relax while walking there - the well-used path has a few magical inscriptions made by followers of the goddess of nobility and the arcane arts, The Noble One. It serves to ward against most weaker creatures, and the ones that could break past the wards don't usually come to small towns like these.");
+			}
+			writeText("As long as you stay close to the major road, you won't have to deal with ambushes from monsters, animals, or things like that. Doesn't stop humans, though, so the occasional bandit can be an issue.");
+			writeText("No surprise attacks today, though. You make it to the town without incident, walking past a few early-morning food stalls as you go. For the most part, you only really see humans in town, but there are a couple of monsters that work well-enough with humans that they're not a problem. Most of them are wandering hunters like yourself, though.");
+			writeText("You politely turn down the myriad low-price offers from vendors (not only are you broke, but the guild hall supplies free food to active hunters anyway), before finally arriving at your destination.");
+			writeText("The imaginatively-named 'Town Guild Hall' looks a bit shabby from the outside, and not too much better on the inside, but it's at least functional. Not a bad place to get started from, all things considered.");
+			writeText("Walking in, you spot a few half-familiar faces - bartender, barmaid, town bicycle, et cetera. More importantly, you can tell from the date listed on the quest board that some new requests have been added since you left.");
+			writeText("Time to get to work.");
+			if(data.story.kobold1 == false){
+				writeTransition("guildQuestKobold","A kobold attacked a noble in the woods recently [-1 STA]");
+			}
+			writeTransition("endOfContent","A [unknown] has been sighted near the local lake [-1 STA] [BROKEN]");
+			writeTransition("endOfContent","A clergyman wants the broken-down church to the north cleared out [-1 STA] [BROKEN]");
+			if(data.story.mothman1 == false){
+				writeTransition("endOfContent","A mothman has been attacking people during the night [-1 STA]");
+			}
+			break;
+		}
+		case "guildQuestKobold" : {
+			data.story.playerSta -=1;
+			updateMenu();
+			writeText("The quest seems fairly straightforward - a kobold attacked some noble, took a bit of his money, and left. There's a brief description of the target (short, brown scales), but the whole job seems a bit sparse on the details of what actually happened.");
+			writeText("Of course, if it's a Tainted kobold, that would make sense. Not too many people are willing to include the more lurid parts of those encounters, save for the exhibitionists. There's a good chance your employer ended up taking a ride on the wild side against his will.");
+			writeText("Either way, a quest's a quest, and the pay's... fine. You tell the excessively busty barmaid (a reliable staple of all guild halls) that you're taking this quest and, a few minutes later, you're on your way.");
+			writeText("...");
+			writeText("Arriving in the forest, you find that you're actually not too far from your earlier campsite - you're all of a ten-minute walk from it.");
+			writeText("Navigating around, it doesn't take you too long to start navigating through the area and even find a few signs of movement.");
+			writeText("The footprints are clearly digitigrade, and the marks of claws on the exposed tree-roots...");
+			writeText("Definitely kobold tracks.");
+			if(data.story.playerAgl > 0){
+				writeText("You quickly start following them through the gaps between the trees, carefully watching your footing as you do. You have a bit of trouble at first, but you get used to it quickly and start making good time.");
+			}
+			else{
+				writeText("You quickly start following them through the gaps between the trees, carefully watching your footing as you do. You have trouble keeping your balance, but you avoid tripping over any of the roots or clods of dirt.");
+			}
+			writeText("After a few minutes of following the prints, you find an open, grassy clearing. It definitely seems like you're not the only person to have been here recently - near the tree-line on the opposite side of the clearing, there's a fire-circle that loks less than a day old. You can't quite tell from the distance but, oddly, it doesn't seem like the tinder was ever even ignited...");
+			if(data.story.playerAgl > 0 || data.story.curseSubmission){
+				writeScene("forestKoboldAgiWin");
+				break;
+			}
+			else{
+				writeScene("forestKoboldAgiLose");
+				break;
+			}
+			break;
+		}
 		case "forestKobold" : {
+			data.story.kobold1 = true;
 			data.story.playerSta -=1;
 			updateMenu();
 			if(data.story.playerAgl > 0){
