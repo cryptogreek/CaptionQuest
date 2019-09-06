@@ -921,7 +921,7 @@ function changeName(target) {
 					data.story.deityWorshipped = "King of Strife";
 					console.log("deity is "+data.story.deityWorshipped);
 					data.story.playerStr = 0;
-					data.story.playerAgl = 1;
+					data.story.playerAgl = 0;
 					data.story.playerMag = 0;
 					data.story.playerEss = 0;
 				break;

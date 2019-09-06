@@ -158,25 +158,21 @@ function writeScene(scene) {
 			writeText("There've been claims that a monster has been attacking people in the forest, though they seem to come out mostly fine. It seems to steal valuables and scamper off quickly, though the person who put in the request to have it taken care of seemed almost against going into further detail. It's not hard to imagine why...");
 			writeText("Still, you're a monster-hunter. Some small-time kobold shouldn't be too problematic.");
 			writeText("After a few minutes of walking, you find a more open, grassy clearing. From the looks of it, you're not the only person to have been here recently - near the tree-line on the opposite side of the clearing, there's a fire-circle that loks less than a day old. Oddly enough, it doesn't seem like the tinder was ever even ignited...");
-			if(data.story.playerAgl > 0){
+			if(data.story.playerAgl > 0 || data.story.curseSubmission){
 				writeScene("forestKoboldAgiWin");
 				break;
 			}
 			else{
-				writeText("After you've finished putting away everything, you grab your stuff and walk through the gaps between the trees, carefully watching your footing as you do. You have trouble keeping your balance, but you avoid tripping over any of the roots or clods of dirt.");
+				writeScene("forestKoboldAgiLose");
+				break;
 			}
-			writeSpeech(data.story.name, "player", "Hey, " + data.story.motherName + "? How are you feeling?");
-			writeSpeech(data.story.motherName, "scripts/gamefiles/real/oldfile0.jpg", "Huh? I'm feeling fine, did something happen? You certainly look chipper today.");
-			writeSpeech(data.story.name, "player", "It's nothing, forget it.");
-			writeText("She goes back to putting away dishes. She doesn't even seem to realize her own name has been changed, or that you look completely different. Your attention is quickly grabbed by a 'morning' you hear from the kitchen's entryway.");
-			writeTransition("endOfContent", "Your sister arrives");
 			break;
 		}
 		case "forestKoboldAgiLose" : {
 			writeText("Not available just yet.");
 			break;
 
-			
+
 		}
 		case "forestKoboldAgiWin" : {
 			writeText("Suddenly, there's a rustling behind you.");
