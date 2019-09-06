@@ -934,6 +934,7 @@ function changeName(target) {
 					data.story.playerEss = 0;
 				break;
 			}
+			console.log("agi stored as "+data.story.playerAgl);
 			console.log("deity stored as "+data.story.deityWorshipped);
 			updateMenu();
 			sceneTransition('lookInTheMirror');
