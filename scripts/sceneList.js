@@ -186,7 +186,7 @@ function writeScene(scene) {
 				writeBig("images/CQ/content/scene002-2.jpg");
 				writeSpeech("Kobold","images/CQ/icons/kobold1.jpg","...Huh. And I thought <i>I</i> was being forward.");
 				writeText("She shifts around a little bit, getting flushed as you get an eyeful of her snatch. You can see her getting wetter by the second, the musk unmistakeable musk of arousal hitting you like a train.");
-				if(curseSubmission){
+				if(data.story.curseSubmission){
 					writeText("Your body reacts strongly to the smell, a hand moving to your expanding dick as you realize how close her ass is to your face. A moment too late, you realize your mistake.");
 					writeText("She suddenly throws her ass against your face, the plush sensation causing no pain as you lose your balance. You shout in surprise, but your mouth is quickly covered by her moist lips as you hear her laugh.");
 					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Ha~! Holy shit, how pent-up do you have to be to just let go at the first whiff of my scent? Do humans go into heat too?");
