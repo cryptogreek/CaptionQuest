@@ -169,10 +169,88 @@ function writeScene(scene) {
 			break;
 		}
 		case "forestKoboldAgiLose" : {
-			writeText("Not available just yet.");
+			writeText("<b>AGI test <i>failed.</i></b>");
+			writeText("Suddenly, you feel something small but sturdy slam into the backs of your thighs, throwing you completely off balance and knocking you to the ground. Rolling over reveals a barely-clothed and <i>very</i> feminine form standing above you. From the old iron shackles on her neck and ankles, along with the brown speckled scales, you're pretty confident that this is your target.");
+			writeText("Given that she's standing right above you, poised uncomfortably well for a quick kick at certain sensitive parts of your anatomy, you hold still.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Hah~! They finally sent someone to try and capture me, huh? And here I was, thinking that taking that rich-boy's money wouldn't be enough to get someone a bit more <i>built</i> sent my way!");
+			writeText("She grins, leaning forward at the hips to get a better look at you. She doesn't have much of a chest to aim at you, but the scraps of cloth can't even hide that much as you feel your body respond.");
+			writeText("She starts smirking, now.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","I guess I'm not the only pent-up one, eh?");
+			writeText("Your adventuring (and the general lack of <i>action</i> on a regular basis) has left you a bit quick to stir, and those hips of hers are practically the definition of 'breedable'.");
+			writeText("She nudges at your straining pants with a foot, putting her in an even <i>more</i> dominant position as those claws of hers sit just around navel-level.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","So much for being some kinda hunter. From where I'm standing, you seem less like a hunting-hound and a whole lot more like a puppy!");
+			writeText("At that, she grins and turns, angling her ass at you.");
+			writeBig("images/CQ/content/scene002-raw.png");
+			writeText("Her ass jiggles furiously as sound of her hand against it rings throughout the clearing.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Like what you're looking at, big guy? Truth be told, I'm only really here for a bit of fun during <i>peak breeding season.</i> I'd've fucked that noble, but the guy couldn't get it up!");
+			writeText("Her hand spreads her ass as she gives what you're pretty sure is a wink.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Luckily for the both of us, I can't say the same about you. So, how about it? Bark for me, hun, and we'll see just what that stiffy is good for.");
+			writeTransition("forestKoboldAgiLoseSubmit","Swallow your pride and bark");
+			writeTransition("forestKoboldAgiLoseResist","Try fighting back");
 			break;
-
-
+		}
+		case "forestKoboldAgiLoseSubmit" : {
+			writeText("You swallow your pride, clear your throat, and give the closest thing to a bark you know how to give. It's... not great.");
+			writeText("Given her expression, though, it seems like enough.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Haha~! Oh my gods, you really did it! Sounds like you deserve a treat, doesn't it?");
+			writeText("With that, she falls backwards, slamming her surprisingly heavy (but <i>very</i> plush) hips against your crotch. Grinding her soft, scaly ass against your straining bulge, she looks over her shoulder to revel in your expression.");
+			writeText("Her tail quickly moves, obscuring her ass but easily being felt as it pulls your pants down, her body hopping a little to get them low enough that you feel her land on your hips with a loud <i>clap.>/i>");
+			writeText("A second later, you feel her sliding your dick between her asscheeks and your own stomach, spreading your precum and her own fluids all across your abdomen for several seconds.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Mm... I think that's enough foreplay, don't you?");
+			writeText("With that, she slowly lifts her weight off of you, deftly angles your cock with her tail, and <i>slams</i> back down.");
+			writeText("In a moment, her kobold-pussy has completely swallowed your cock, the rapid change in tightness forcing a moan out of you.");
+			writeText("You can hear breathy moans coming out of your 'prey' as she starts to lift and drop herself against you, riding you like a fleshy dildo as she keeps muttering the same word,'fuck', over and over again.");
+			writeText("She doesn't even bother teasing you, just violently grinding and fucking herself with your cock as she picks up even more speed and force.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","N-nnn~! Fucking humans... Your dicks...! <i>They're just not fair~!</i>");
+			writeText("Your own pleasure is almost reaching a bursting point yourself, but you grit your teeth and try not to pop too soon.");
+			writeText("Unfortunately, when her moans reach a crescendo and she starts clenching wildly around you, you can't hold back any more.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","F-Fuck! Hurry, fill m-me up! <i>Paint my womb white!</i>");
+			writeText("You oblige her with a throaty grunt, shooting ropes of jizz into her pussy as she slams down. After you shoot your fourth rope, though, you notice that she's not slowing down. If anything, <i>she's speeding up.</i>");
+			writeText("The clapping of her hips against yours echo all throughout the woods as her moans turn into outright screams of pleasure, using your cock to bring her to a final, stronger orgasm that has her entire body shaking on top of yours.");
+			writeText("A moment later, her body collapses onto the grass beside you, your cock popping out with a wet, slurp-like sound.");
+			writeText("Her hand immediately darts down, covering her still-sensitive snatch and preventing any spillage as she looks at you with half-lidded and more-than-half-satisfied eyes before they shut.");
+			writeText("A second later, a gentle snoring tells you that she fell into a post-you nap.");
+			writeText("A reasonable response.");
+			writeText("Placing your hand above her, you can feel part of her energy hovering loosely inside of her. You do need proof of the encounter, after all, so you draw out a fraction of her spiritual essence, feeling it merge with you.");
+			writeText("It doesn't hurt her or anything, but it makes sure you get paid. Plus, the Essence of certain sexually-charged creatures can often have additional effects...");
+			writeText("Overall, though, you're pretty spent. It's probably best that you head to the guild-hall, turn in the quest, and lay back in bed after a job well-fucked.");
+			writeTransition("forestKoboldComplete", "Head to the guild hall and get paid");
+			break;
+		}
+		case "forestKoboldAgiLoseResist" : {
+			writeText("You try to move quickly, pressing away from the dirt to try grabbing her-");
+			writeText("But her thick tail slaps against the side of your knee, buckling it easily as she <i>leaps</i> back, turning her plush ass into a ballistic weapon.");
+			writeText("Between her bodyweight and the weird angle, you're immediately pinned face-first by her asscheeks as she grinds her pussylips against your mouth.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Ha~! You really should've just barked, hun. You're not fast enough to get the drop on me, <i>especially</i> when I already got you once.");
+			writeText("She presses her hips down harder, her scent filling your nose.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","If you want this to feel nice for you too, then you'd better get licking, <i>pup.</i>");
+			writeText("At that, she begins pulling down your pants as you swallow your pride and open your mouth.");
+			writeText("You're surprised when the taste of sweat is a lot fainter than expected, with the flavor of her fluids being a lot stronger. It's... surprisingly pleasant.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Ooh~! You're getting into this, aren't you, pup?");
+			writeText("At that, she starts using her gloved-hand to start jerking you off. From the clear sound of her spitting into her palm, it's obvious what she's using as lube.");
+			writeText("You keep going at her pussy, spreading her lips slightly to tease at her insides, but her moans start coming out in full when you finally drag your tongue high enough up her pussy to find her clit.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","N-Noohh <i>fuck...!</i>");
+			writeText("The jerking slows down for a second, her spit mixing with your precum as she gives it a few slow strokes before stopping entirely.");
+			writeText("Shifting her body around, she makes eye-contact with you as she deftly angles your tail towards her backing-up ass.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Hn. I think that's enough foreplay, don't you?");
+			writeText("With that, she pushed herself all the way back in one push. In a moment, her kobold-pussy has completely swallowed your cock, the rapid change in tightness forcing a moan out of you.");
+			writeText("You can hear breathy moans coming out of your 'prey' as she starts to lift and drop herself against you, riding you like a fleshy dildo as she keeps muttering the same word,'fuck', over and over again.");
+			writeText("She doesn't even bother teasing you, just violently grinding and fucking herself with your cock as she picks up even more speed and force.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","N-nnn~! Fucking humans... Your dicks...! <i>They're just not fair~!</i>");
+			writeText("Your own pleasure is almost reaching a bursting point yourself, but you grit your teeth and try not to pop too soon.");
+			writeText("Unfortunately, when her moans reach a crescendo and she starts clenching wildly around you, you can't hold back any more.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","F-Fuck! Hurry, fill m-me up! <i>Paint my womb white!</i>");
+			writeText("You oblige her with a throaty grunt, shooting ropes of jizz into her pussy as she slams down. After you shoot your fourth rope, though, you notice that she's not slowing down. If anything, <i>she's speeding up.</i>");
+			writeText("The clapping of her hips against yours echo all throughout the woods as her moans turn into outright screams of pleasure, using your cock to bring her to a final, stronger orgasm that has her entire body shaking on top of yours.");
+			writeText("A moment later, her body collapses onto the grass beside you, your cock popping out with a wet, slurp-like sound.");
+			writeText("Her hand immediately darts down, covering her still-sensitive snatch and preventing any spillage as she looks at you with half-lidded and more-than-half-satisfied eyes.");
+			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","S-Such a good... good puppy...");
+			writeText("You open your mouth to speak, but the sounds of gentle snoring stop you as you realize that she fell asleep.");
+			writeText("Placing your hand over her, you can feel part of her energy hovering loosely inside of her. You do need proof of the encounter, after all, so you draw out a fraction of her spiritual essence, feeling it merge with you.");
+			writeText("It doesn't hurt her or anything, but it makes sure you get paid. Plus, the Essence of certain sexually-charged creatures can often have additional effects...");
+			writeText("Overall, though, you're pretty spent. It's probably best that you head to the guild-hall, turn in the quest, and lay back in bed after a job well-fucked.");
+			writeTransition("forestKoboldComplete", "Head to the guild hall and get paid");
+			break;
 		}
 		case "forestKoboldAgiWin" : {
 				writeText("Suddenly, there's a rustling behind you.");
