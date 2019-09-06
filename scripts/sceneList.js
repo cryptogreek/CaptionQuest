@@ -115,22 +115,22 @@ function writeScene(scene) {
 		}
 		case "goEatBreakfast" : {
 			writeText("You sit up quickly, birdsong and the familiar sound of the flowing river reminding you where you are - in your sleeping bag, and in your tent.");
-			if(curseInfertile){
+			if(data.story.curseInfertile){
 				writeText("That was... <i>quite</i> the dream. Though, given that your body really does feel stronger (and that the sleeping bag feels a bit smaller around your body), it couldn't have been <i>just</i> a dream.");
 				writeText("You have a patron deity, now, which could be interesting? The stories of gods <i>blessing</i> mortals were always interesting ones, even if they would sometimes end... poorly.");
 				writeText("Still, with the Lady of Ash's blessing, you should be strong enough to handle just about anything around here, so it's not really worth sticking around thinking about when you could be adventuring.");
 			}
-			else if(curseNarcissus){
+			else if(data.story.curseNarcissus){
 				writeText("That was... <i>quite</i> the dream. The whispers from the star-stone walkway still linger in the back of your mind, though - faint, but definitely there. It wasn't <i>just</i> a dream, then...");
 				writeText("You have a patron deity, now, which should be interesting. The stories of gods <i>blessing</i> mortals were always interesting ones, even if they would sometimes end... poorly.");
 				writeText("Still, with The Noble One's blessing, you should be prepared enough (or at least well-enough informed) to handle just about anything around here, so it's not really worth sticking around thinking about when you could be adventuring.");
 			}
-			else if(curseKindness){
+			else if(data.story.curseKindness){
 				writeText("That was... <i>quite</i> the dream. You can still feel the phantom pains in your feet from the jagged stone, and the though of other people suffering makes your body feel painfully warm, so it definitely wasn't <i>just</i> a dream...");
 				writeText("You have a patron deity, now, which should be interesting. The stories of gods <i>blessing</i> mortals were always interesting ones, even if they would sometimes end... poorly.");
 				writeText("Still, with the King of Strife's blessing, you're more agile and much faster. It isn't exactly the best offense, but it should be enough to handle just about anything around here, so it's not really worth sticking around and thinking about when you could be adventuring.");
 			}
-			else if(curseSubmission){
+			else if(data.story.curseSubmission){
 				writeText("That was... <i>quite</i> the dream. You can't remember any of the details or images of your time in the dream, but just thinking about it has your body getting warm, your face flushing, and your mouth watering. Your entire body seems smaller now, with your rapidly hardening cock being the only exception.");
 				writeText("You can barely keep your hand off of it as you sit up, your sleeping bag feeling roomier than when you  went to sleep. Your shirt rubs against your chest, hot flashes running through your head - not images, just emotions, and the sensation of serving something, <i>anything</i> greater...");
 				writeText("Clearly, it wasn't just a dream.");
