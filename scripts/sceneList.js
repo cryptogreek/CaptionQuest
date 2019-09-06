@@ -87,7 +87,7 @@ function writeScene(scene) {
 				writeText("But as you do, you feel a pang through your skull – a twisting pain stabbing into your head as images of other people running across this path, of the pain that those who weren't fast enough had to endure, course through your mind. The desire to grab them, push them forward, <i>save them</i> causes you to stumble, slamming hard into the ground and rolling forward across ground thats smoother than you expected.");
 				writeText("When you come to a halt, you look up to see <b><i>him.</i></b>");
 				writeText("The King of Strife.");
-				writeBig("images/CQ/content/scene001-3.png");
+				writeBig("images/CQ/content/scene001-3-raw.jpg");
 				writeText("Sunken eyes stare harshly down at you, standing at easily three times your height as shifts his staff.");
 				writeSpeech("King of Strife","images/CQ/icons/bob.png","Neither you, nor I, have any reason to waste time with details. You did not come here for a <i>lecture</i>, but for <i>power</i>. Receive my blessing, become the champion of the God of Strife, and go forth.");
 				writeText("His staff slowly shifts towards you, but his scowl deepens.");
@@ -169,7 +169,7 @@ function writeScene(scene) {
 			writeSpeech(data.story.motherName, "scripts/gamefiles/real/oldfile0.jpg", "Huh? I'm feeling fine, did something happen? You certainly look chipper today.");
 			writeSpeech(data.story.name, "player", "It's nothing, forget it.");
 			writeText("She goes back to putting away dishes. She doesn't even seem to realize her own name has been changed, or that you look completely different. Your attention is quickly grabbed by a 'morning' you hear from the kitchen's entryway.");
-			writeTransition("yourSisterArrives", "Your sister arrives");
+			writeTransition("endOfContent", "Your sister arrives");
 			break;
 		}
 		case "forestKoboldAgiLose" : {
@@ -197,7 +197,7 @@ function writeScene(scene) {
 					writeText("You can tell how strong your own arousal must have smelled from the way she nearly squirted onto your face.");
 					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","F-Fuck. You're bigger than I expected, humie. If I'm going to fit this inside...");
 					writeText("She pushes her ass onto your face harder, adjusting her position with a quick jiggle.");
-					writeSpeech("Kobold","images/CQ/icons/kobold1.jpg","...then you'd better get <i><b>licking.</b></i>");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","...then you'd better get <i><b>licking.</b></i>");
 					writeText("Unable to stop yourself, you immediately start tonguing her slit. Unable to see past her heavy ass, you have to navigate by touch, making it hard to aim... Not that she seems to mind your movements.");
 					writeText("A moment later, you try (and fail) to stifle a moan into her cunt as her long, rough tongue starts grasping your length, climbing up and down for a few seconds before stopping.");
 					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","H-How's it feel, humie?");
@@ -319,6 +319,10 @@ function writeScene(scene) {
 			writeText("There's no sign of the kobold around you, just the warmth of a small fire in the fire-circle, and a whole bunch of pebbles organized to spell out, 'Thanks for the fun pup'.");
 			writeText("Having slept enough, it's time to head back to the guild hall. Though, you'll probably head home first. Your entire outfit stinks of sex, sweat, and even more sex...");
 			writeTransition("forestKoboldComplete", "Wash off and head to the guild hall") 
+			break;
+		}
+		case "forestKoboldComplete" : {
+			writeText("This isn't done yet.");
 			break;
 		}
 		case "yourSisterArrives" : {
