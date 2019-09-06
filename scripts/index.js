@@ -899,7 +899,7 @@ function changeName(target) {
 		case 'player':
 			data.story.name = document.getElementById('nameSubmission').value;
 			console.log("bodytype: "+data.story.bodytype);
-			data.story.playerSta = 10;
+			data.story.playerSta = 5;
 			switch(data.story.bodytype){
 				case 1:
 					data.story.deityWorshipped = "The Lady of Ash";

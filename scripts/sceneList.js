@@ -175,6 +175,8 @@ function writeScene(scene) {
 		case "forestKoboldAgiLose" : {
 			writeText("Not available just yet.");
 			break;
+
+			
 		}
 		case "forestKoboldAgiWin" : {
 			writeText("Suddenly, there's a rustling behind you.");
