@@ -106,35 +106,219 @@ function writeScene(scene) {
 				data.story.curseSubmission = true;
 				break;
 			}
-			writeTransition("endOfContent", "That's all for now");
+			writeTransition("goEatBreakfast", "Awaken to the sounds of the forest");
 			break;
 		}
 		case "endOfContent" : {
-			writeText("You clicked me anyway. You monster.");
+			writeText("Sorry, but this part isn't ready yet.");
 			break;
 		}
 		case "goEatBreakfast" : {
-			writeText("You stride down the stairs, an excited pep in your step you haven't felt in years. You're actually excited to start the day for once!");
-			writeText("And with a grin on your face you walk into the kitchen. On the other side of the counter is your guardian, washing bits of food off of a cutting board.");
-			if (incest == false) {
-			writeText("She adopted you and your 'sister' before you were old enough to remember. Despite the fact that none of you are actually related by blood, she still sees you two as her children.");
+			writeText("You sit up quickly, birdsong and the familiar sound of the flowing river reminding you where you are - in your sleeping bag, and in your tent.");
+			if(curseInfertile){
+				writeText("That was... <i>quite</i> the dream. Though, given that your body really does feel stronger (and that the sleeping bag feels a bit smaller around your body), it couldn't have been <i>just</i> a dream.");
+				writeText("You have a patron deity, now, which could be interesting? The stories of gods <i>blessing</i> mortals were always interesting ones, even if they would sometimes end... poorly.");
+				writeText("Still, with the Lady of Ash's blessing, you should be strong enough to handle just about anything around here, so it's not really worth sticking around thinking about when you could be adventuring.");
 			}
-			writeText("A ping from your phone calls your attention. On the screen is a prompt to change her name.");
-			writeBig("images/real/lisa/oldfile1.jpg");
-			writeText("Your mother's name is <input type='text' id='nameSubmission' value='Lisa'>");
-			document.getElementById('output').innerHTML += `
-				<p class="choiceText" onclick="changeName('mother')">
-					Finish and sit down
-				</p>
-			`;
+			else if(curseNarcissus){
+				writeText("That was... <i>quite</i> the dream. The whispers from the star-stone walkway still linger in the back of your mind, though - faint, but definitely there. It wasn't <i>just</i> a dream, then...");
+				writeText("You have a patron deity, now, which should be interesting. The stories of gods <i>blessing</i> mortals were always interesting ones, even if they would sometimes end... poorly.");
+				writeText("Still, with The Noble One's blessing, you should be prepared enough (or at least well-enough informed) to handle just about anything around here, so it's not really worth sticking around thinking about when you could be adventuring.");
+			}
+			else if(curseKindness){
+				writeText("That was... <i>quite</i> the dream. You can still feel the phantom pains in your feet from the jagged stone, and the though of other people suffering makes your body feel painfully warm, so it definitely wasn't <i>just</i> a dream...");
+				writeText("You have a patron deity, now, which should be interesting. The stories of gods <i>blessing</i> mortals were always interesting ones, even if they would sometimes end... poorly.");
+				writeText("Still, with the King of Strife's blessing, you're more agile and much faster. It isn't exactly the best offense, but it should be enough to handle just about anything around here, so it's not really worth sticking around and thinking about when you could be adventuring.");
+			}
+			else if(curseSubmission){
+				writeText("That was... <i>quite</i> the dream. You can't remember any of the details or images of your time in the dream, but just thinking about it has your body getting warm, your face flushing, and your mouth watering. Your entire body seems smaller now, with your rapidly hardening cock being the only exception.");
+				writeText("You can barely keep your hand off of it as you sit up, your sleeping bag feeling roomier than when you  went to sleep. Your shirt rubs against your chest, hot flashes running through your head - not images, just emotions, and the sensation of serving something, <i>anything</i> greater...");
+				writeText("Clearly, it wasn't just a dream.");
+				writeText("You have a patron deity, now, which should be interesting. The stories of gods <i>blessing</i> mortals were always interesting ones, even if they would sometimes end... poorly. Though, given how frequently that involves some monster pinning the <i>'hero'</i> down, you're not sure you have a problem with that...");
+				writeText("Still, with... <i>someone's</i> blessing, you should be agile enough to avoid getting into too much trouble (unless you <i>want</i> trouble, of course), so it's not really worth sticking around thinking about when you could be adventuring.");
+			}
+			writeText("You set-up camp last night pretty quickly, staying a bit closer to the river than you'd really meant to - you must've been more tired from the day's journey than you thought. Still, you weren't jumped in your sleep by anything (or anyone), so it should be fine this time.");
+			writeText("Still, packing up camp is sooner, rather than later, is probably for the best. If you're waking up, there's no telling what else is coming down to the river for a morning drink.");
+			writeText("While you're stowing the tent and rolling up your sleeping bag, you think about where you should go next.");
+			writeTransition("forestKobold", "Walk through the forest");
+			writeTransition("riverUnknown", "Follow the river [BROKEN]");
+			writeTransition("pathUnknown", "Take the worn path [BROKEN]");
 			break;
 		}
-		case "finishAndSitDown" : {
+
+
+		case "forestKobold" : {
+			if(data.story.playerAgl > 0){
+				writeText("After you've finished putting away everything, you grab your stuff and walk through the gaps between the trees, carefully watching your footing as you do. You have a bit of trouble at first, but you get used to it quickly and start making good time.");
+			}
+			else{
+				writeText("After you've finished putting away everything, you grab your stuff and walk through the gaps between the trees, carefully watching your footing as you do. You have trouble keeping your balance, but you avoid tripping over any of the roots or clods of dirt.");
+			}
+			writeText("As you walk, you think about exactly <i>why</i> you're here.");
+			writeText("There've been claims that a monster has been attacking people in the forest, though they seem to come out mostly fine. It seems to steal valuables and scamper off quickly, though the person who put in the request to have it taken care of seemed almost against going into further detail. It's not hard to imagine why...");
+			writeText("Still, you're a monster-hunter. Some small-time kobold shouldn't be too problematic.");
+			writeText("After a few minutes of walking, you find a more open, grassy clearing. From the looks of it, you're not the only person to have been here recently - near the tree-line on the opposite side of the clearing, there's a fire-circle that loks less than a day old. Oddly enough, it doesn't seem like the tinder was ever even ignited...");
+			if(data.story.playerAgl > 0){
+				writeScene("forestKoboldAgiWin");
+				break;
+			}
+			else{
+				writeText("After you've finished putting away everything, you grab your stuff and walk through the gaps between the trees, carefully watching your footing as you do. You have trouble keeping your balance, but you avoid tripping over any of the roots or clods of dirt.");
+			}
 			writeSpeech(data.story.name, "player", "Hey, " + data.story.motherName + "? How are you feeling?");
 			writeSpeech(data.story.motherName, "scripts/gamefiles/real/oldfile0.jpg", "Huh? I'm feeling fine, did something happen? You certainly look chipper today.");
 			writeSpeech(data.story.name, "player", "It's nothing, forget it.");
 			writeText("She goes back to putting away dishes. She doesn't even seem to realize her own name has been changed, or that you look completely different. Your attention is quickly grabbed by a 'morning' you hear from the kitchen's entryway.");
 			writeTransition("yourSisterArrives", "Your sister arrives");
+			break;
+		}
+		case "forestKoboldAgiLose" : {
+			writeText("Not available just yet.");
+			break;
+		}
+		case "forestKoboldAgiWin" : {
+			writeText("Suddenly, there's a rustling behind you.");
+				writeText("<b>AGI test <i>passed.</i></b>");
+				writeText("You barely manage to dodge to the side, something small barely able to wrap its hands around your ankle as you turn.");
+				writeText("Unfortunately for the creature, you're easily able to crouch down and grab it from your position, securing it tightly.");
+				writeText("Or, securing <i>her</i>, you should say. Getting a strong hold on her meant grabbing near center-mass, and the lizard-girl is a little... <i>bottom-heavy.</i>");
+				writeText("She just kinda stops for a moment, her breathing hitching as she looks over your shoulder at your hands as they grasp around her ass.");
+				writeBig("images/CQ/content/scene002-2.jpg");
+				writeSpeech("Kobold","images/CQ/icons/kobold1.jpg","...Huh. And I thought <i>I</i> was being forward.");
+				writeText("She shifts around a little bit, getting flushed as you get an eyeful of her snatch. You can see her getting wetter by the second, the musk unmistakeable musk of arousal hitting you like a train.");
+				if(curseSubmission){
+					writeText("Your body reacts strongly to the smell, a hand moving to your expanding dick as you realize how close her ass is to your face. A moment too late, you realize your mistake.");
+					writeText("She suddenly throws her ass against your face, the plush sensation causing no pain as you lose your balance. You shout in surprise, but your mouth is quickly covered by her moist lips as you hear her laugh.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Ha~! Holy shit, how pent-up do you have to be to just let go at the first whiff of my scent? Do humans go into heat too?");
+					writeText("You reach up to try and push her off, but she brings her legs back and presses her calves against your wrists, pinning you completely.");
+					writeText("A moment later, you feel her gloved hands press down on your thighs. You should be able to kick about anyway, but you can't even seem to bring yourself to do anything but moan as she presses her face into your crotch.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Mm... Going by the smell, I'm not the only one in need of a little release, am I? You're practically tearing through these pants of yours, so let's try letting it out for a second, hm?");
+					writeText("You feel her pussy start to get wetter on your lips, the smell of her arousal getting even stronger as the breeze hits your cock.");
+					writeText("You can tell how strong your own arousal must have smelled from the way she nearly squirted onto your face.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","F-Fuck. You're bigger than I expected, humie. If I'm going to fit this inside...");
+					writeText("She pushes her ass onto your face harder, adjusting her position with a quick jiggle.");
+					writeSpeech("Kobold","images/CQ/icons/kobold1.jpg","...then you'd better get <i><b>licking.</b></i>");
+					writeText("Unable to stop yourself, you immediately start tonguing her slit. Unable to see past her heavy ass, you have to navigate by touch, making it hard to aim... Not that she seems to mind your movements.");
+					writeText("A moment later, you try (and fail) to stifle a moan into her cunt as her long, rough tongue starts grasping your length, climbing up and down for a few seconds before stopping.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","H-How's it feel, humie?");
+					writeText("Her gloved-hand starts working your slick shaft, her thumb teasing your head.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Are you enjoying being my little <i>l-loveseat?</i> From how hard and... <i>big</i> you're getting, I'd think this was your fetish~!");
+					writeText("You can feel yourself throbbing even harder in her hand, confirming it.");
+					writeText("Then, suddenly, she stops.");
+					writeText("She practically whirls around, your lips making a faint <i>POP</i> as they separate from her pussy (almost as loud as her moan).");
+					writeText("Before you can even think about why, you feel her ass crash down on your chest, soaking your shirt in your spit and her arousal.");
+					writeText("She leans in close to your face, her tongue flicking against your lips for a moment.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Bark for me.");
+					writeText("You jump slightly as her tail rubs up against you, the rough sensation of her semi-slick scales ripping a moan from your throat.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","I've seen kobold-<i>pups</i> with more dominance than you. You're just some human-puppy that's more desperate for release than a <i>heat-stricken <b>bitch,</b></i>. So <i>bark for me.</i>");
+					writeText("For a brief, brief moment, you manage to restrain yourself, to hold onto enough pride to keep your mouth shut.");
+					writeText("Then she stops her tail, and you break.");
+					writeText("You open your mouth to bark, but all that really comes out is a half-moaned mewl. Going by the look in her eyes, though, it was still enough.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Nnn~! Now <i>that's</i> a good pup... And seeing as I'm such a kind little master, I think that that's worth a special little <i>treat~!</i>");
+					writeText("With that, she raises her ass off of your chest, slides further back, and angles you with her tail. You can feel your tip just barely touching her lips, teasing you gently for a few agonizingly long seconds, before...");
+					writeText("She slams the full-weight of her massive hips down on your crotch, sinking balls-deep in one carefully aimed thrust as she moans loud enough that it scares away the birds.");
+					writeText("She stops even trying to speak or tease you, instead throwing herself onto your cock like cock-crazed whore. Her breathy moans only turn you on more as you dig your fingers into the dirt, already nearing release almost pathetically fast.");
+					writeText("When you start spurting inside her, you half-expected her to slow down, but it only makes her redouble her efforts as she starts rapidly clenching around you.");
+					writeText("She's cumming from the sensation of getting filled up.");
+					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","More, more...! <i>Fill me up even more, pup~!</i>");
+					writeText("Her orgasmic-clenching milks your full length even more, your body seemingly ignoring your refractory period as you launch a second load into her, and a third less than a minute after that.");
+					writeText("Your vision goes white as she rides you harder with each spurt into her womb.");
+					writeText("After only a minute more, you feel yourself lose consciousness...");
+					writeTransition("forestKoboldSubby", "Wake up after a while");
+					break;
+				}
+			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","So... You, uh... Gonna do something?");
+			writeText("Grabbing her ass tighter, you quickly pin her to the ground. She hits the ground chest-first pretty solidly but, instead of a grunt of pain, you hear a muffled moan, along with a whisper.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold2.jpg","Fuck... <i>That's</i> more like it.");
+			writeText("The scent is getting much, much stronger as she 'struggles' under your grasp, hardly doing more than squirming her ass at you.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold2.jpg","Oh no~! The big bad human has me pinned! Gods, I wonder what kind of thing he'll do next~!");
+			writeText("It's about as convincing as tits on a skeleton, but fuck if it isn't getting you hard.");
+			writeText("Given the way that her tail keeps rubbing against and up your thighs, you doubt that she hasn't noticed.");
+			writeText("It seems like she's in heat, so the attacks were probably just her trying to sate it. You could try fucking her into submission, but maybe she just needs a stern (and chaste) talking-to.");
+			writeTransition("forestKoboldAgiWinFuck", "Fuck the heat out of her");
+			writeTransition("forestKoboldAgiWinChaste", "Give her a stern talking-to");
+			break;
+		}
+		case "forestKoboldAgiWinFuck" : {
+			writeText("You grab the back of her head and press it into the ground, the impact accentuated with her butt tensing against you.");
+			writeText("She starts moaning into the dirt as you pull your pants down enough to pop your dick out. Given a kobold's strong sense of smell, it's not hard to figure out why her snatch is practically drooling at this point.");
+			writeText("You line yourself up against her pussylips, sliding your cock against them to get it slick.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold2.jpg","Ooooh my gods...");
+			writeText("Despite being muffled by the grass and dirt, she keeps going.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold2.jpg","N-No way! There's no way my <i>tight kobold-pussy</i> will be able to survive a human's hot, <b>throbbing</b> dick!");
+			writeText("She's practically throwing her body at your cock, trying to penetrate herself while you lube up.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold2.jpg","If you start <i>pumping</i> my poor, unprotected womb with your thick cum, I'll end up hopelessly addicted to-");
+			writeText("Her voice cuts out into a half-screeching moan as you thrust into her, finally slick enough to avoid hurting her. Much.");
+			writeText("She wasn't kidding about the tightness, though. You're barely halfway in, but every inch that's pushed past her lips feels like it's in a <i>vice.</i>");
+			writeText("Despite only half of your cock being able to fit, it still feels incredible as you saw back and forth, pulling out until your head is about to slide out, before <i>forcing</i> your length in slowly, relishing the pressure at every instant.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold2.jpg","F-Fucking... Addicted, to your... No way, I'd be aroused by... <i><b>F-fuuuuuck...</b></i>");
+			writeText("After a few more seconds, you can feel her start to rapidly start clenching and relaxing around you, her body shaking on the ground. A second later, you even notice a pattern to it...");
+			writeText("Each time she relaxes a bit, you thrust deeper into her, ripping moan after moan from her body as she forgoes even attempting sentences and instead keeps screaming 'FUCK ME' at the top of her lungs.");
+			writeText("You're nothing if not willing to oblige.");
+			writeText("You start getting rougher with her body, pulling her closer for better leverage as you start pounding harder and faster, her depths stretching taut around you as she throws her body against you with every thrust.");
+			writeText("Just when you're almost bottoming out, you feel a weight wrap around your waist as her tail reaches around your back.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold2.jpg","<i>Fucking <b>fill me,</b> stud.</i");
+			writeText("Putting every bit of power you can behind your thrust, you feel her tail pulling you closer as you hear the satisfying <i>slap</i> of your balls on her ass.");
+			writeText("You think for a second about giving her a chance to get used to it, your cockhead pressing against the opening to her womb.");
+			writeText("Then you start pounding her with every ounce of strength you have, listening to her frantic squeaks as she starts her second orgasm.");
+			writeText("You can feel your pleasure starting to build as your hips make ripples across her fat ass with each thrust, and you do the only thing that seems reasonable.");
+			writeText("You pick up speed.");
+			writeText("Her clenching becomes more frequent and random with each second, her body practically vibrating from the orgasm as her tongue rolls out of her mouth, her eyes rolling up as she twitches.");
+			writeText("You're about finished, and you finally thrust into her as deeply as you can, pressing your cockhead against her womb as you <i>fire.</i>");
+			writeText("Each spurt begins to flood her, firing off rope after rope as you let out a guttural moan. Despite her being barely conscious, you can still feel her body milking every drop out of your shaft as you tense up inside her.");
+			writeText("When you finally finish up, you can't help but admire the fact that, when you lift her insensate form up enough to see her belly, there's a clear bulge where your dick is.");
+			writeText("Pulling out is fairly easy after the brutal fucking that you just pulled, but you're caught off-guard when her hand moves almost instinctually to her pussy, pressing tightly against it to prevent any spillage.");
+			writeText("You open your mouth to speak, but the sounds of gentle snoring stop you as you realize that she fell asleep.");
+			writeText("Placing your hand over her, you can feel part of her energy hovering loosely inside of her. You do need proof of the encounter, after all, so you draw out a fraction of her spiritual essence, feeling it merge with you.");
+			writeText("It doesn't hurt her or anything, but it makes sure you get paid. Plus, the Essence of certain sexually-charged creatures can often have additional effects...");
+			writeText("Overall, though, you're pretty spent. It's probably best that you head to the guild-hall, turn in the quest, and lay back in bed after a job well-fucked.");
+			writeTransition("forestKoboldComplete", "Head to the guild hall and get paid");
+			break;
+		}
+		case "forestKoboldAgiWinChaste" : {
+			writeText("While holding her steady, you start explaining the faults in what she's doing, from forcing herself onto others, as well as in taking their valuables after she, assumedly, fucks them into unconsciousness.");
+			writeText("After a few sentences, she stops shifting and struggling so much, so you assume you're getting to her with your words.");
+			writeText("You carefully continue, choosing your words as she relaxes further, and conclude with a heart-warming statement about the importance of seeking to help others, rather than taking from them.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","...Okay. I'll stop the whole <i>raping</i> thing. Happy?");
+			writeText("You release her with a nod, smiling as you do.");
+			writeText("A second later, you're winded from her tail slamming into your chest as she shoves you over, pressing a foot heavily onto your crotch.");
+			writeText("When you try to move aside, she scowls and applies more pressure. It doesn't actually hurt your dick (if anything, it feels amazing), but the sharp claws beginning to press against your stomach are enough to stop you.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","Are you for real?");
+			writeText("She slowly starts working her foot up and down your length, the combination of pressure and the rough texture of your pants' fabric starting to get you off.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","Like, seriously. You're not a paladin, or you'd be wearing some <i>real</i> armor, and I wouldn't've even bothered jumping you. Ain't a big enough can-opener in the world for those fuckers.");
+			writeText("More of her weight shifts onto her foot and, briefly, she freezes.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","Don't think I can't feel you getting harder, wannabe-hero.");
+			writeText("She jerks her foot back, her claws managing to hook onto your pants and <i>tear</i> them down, which actually fucking hurts.");
+			writeText("You reflexively jerk away, but her foot quickly applies pressure to your stomach as she literally steps onto you.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","Guys like you are the best prey, but somehow the worst, too. I've never met <i>one</i> person preaching about all that shit that didn't get off to having their words cast aside, to being stepped on by some slutty forest rapist.");
+			writeText("She starts smearing your pre around, grasping your cock between the toes of one foot as the other traces lines across your chest.");
+			writeText("You can feel her entire body weight crushing down on your dick as she shifts around, making you squirm - and every time you squirm, she has to shift her weight again. You can feel your shame welling up underneath her as she reaches her hand down, sliding one gloved finger into her slit.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","Hurry up and shoot your first pathetic load, <i>good guy.</i> If you don't want me raping some wandering noble and taking his daddy's money, then you'd better be ready for me to ride your cock and <i>face</i> until my pussy's so sore I can't handle the <i>fucking breeze on it.</i>");
+			writeText("Just the thought of her riding you, of her slick depths wrapping around your cock, is enough for you to start spurting your shame onto her foot, your stomach, and even your chest.");
+			writeText("Her eyes widen for a moment as you keep shooting more and more, but she quickly goes back to scowling as she slowly steps forward, one foot on your chest now, and the cum-covered one right above your face.");
+			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","Let's start with something simple, <i>pup</i>.");
+			writeText("That night was spent engaged in unbelievably raunchy sex as the kobold established exactly how depraved she could be to you. Cum-eating, snowballing, prostate-milking, and a bit of CBT later, you're laying completely naked in the forest, your balls unable to fire another drop, your nipples a bright red and sensitive enough that the wind hurts, and so exhausted that it takes you four hours to finally muster the strength to walk home.");
+			writeText("On the upside, you're pretty sure she isn't in heat anymore, and you were able to get a fragment of her Essence to prove that you completed the job.");
+			writeText("On the downside, even in the evening, there's still people who might see you in the streets...<br>");
+			writeText("<b>CryptoGreek here. Writing the full-on sex scene with all of those fetishes would take forever so, unless someone finally starts commissioning my short-story-writing again, I'll leave it there. Besides, this is a joke path anyway. I mean, this is a porn game. Did you really think you could talk the horny kobold into a convent or something? Stepfordization ain't my fetish, man.</b>");
+			writeTransition("forestKoboldComplete", "Sneak home shamefully, rinse the sexual fluids off, and turn in the quest");
+			break;
+		}
+		case "forestKoboldSubby" : {
+			writeText("When you wake up, it's to a bone-deep soreness in your hips and the pleasant, if surprising feeling of the kobold laying gently against your chest, apparently having fucked you into even more of a coma than you were.");
+			writeText("Despite that, you can clearly see her hand cupping her pussy in her sleep, seemingly unwilling to let any of your cum drip out.");
+			writeText("It wasn't exactly the most <i>orthodox</i> method of stopping the kobold, but you get the feeling that her heat is probably sated (at least for a while), and she won't be attacking anyone for a little while.");
+			writeText("Placing your hand over her, you can feel part of her energy hovering loosely inside of her. You do need proof of the encounter, after all, so you draw out a fraction of her spiritual essence, feeling it merge with you.");
+			writeText("With that done, you could probably go to the local guild-hall to confirm that the job's finished, on the other hand, you're not even sure you can stand right now...");
+			writeTransition("forestKoboldComplete", "Head to the guild hall and get paid");
+			writeTransition("stayAWhile", "Sleep beside the kobold for a little bit longer");
+			break;
+		}
+		case "stayAWhile" : {
+			writeText("You end up sleeping for a while longer. It's a comfortable, dreamless sleep, and you end up sleeping until almost dawn.");
+			writeText("There's no sign of the kobold around you, just the warmth of a small fire in the fire-circle, and a whole bunch of pebbles organized to spell out, 'Thanks for the fun pup'.");
+			writeText("Having slept enough, it's time to head back to the guild hall. Though, you'll probably head home first. Your entire outfit stinks of sex, sweat, and even more sex...");
+			writeTransition("forestKoboldComplete", "Wash off and head to the guild hall") 
 			break;
 		}
 		case "yourSisterArrives" : {
