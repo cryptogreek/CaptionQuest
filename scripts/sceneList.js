@@ -143,7 +143,7 @@ function writeScene(scene) {
 			writeTransition("forestKobold", "Walk through the forest [-1 STA]");
 			writeTransition("riverUnknown", "Follow the river [-1 STA] [BROKEN]");
 			writeTransition("pathUnknown", "Take the old, worn path [-1 STA] [BROKEN]");
-			writeTransition("goToGuildHall", "Go back to the Guild Hall [BROKEN]");
+			writeTransition("goToGuildHall", "Go back to the Guild Hall");
 			break;
 		}
 		case "goToGuildHall" : {
@@ -158,8 +158,11 @@ function writeScene(scene) {
 			writeText("No surprise attacks today, though. You make it to the town without incident, walking past a few early-morning food stalls as you go. For the most part, you only really see humans in town, but there are a couple of monsters that work well-enough with humans that they're not a problem. Most of them are wandering hunters like yourself, though.");
 			writeText("You politely turn down the myriad low-price offers from vendors (not only are you broke, but the guild hall supplies free food to active hunters anyway), before finally arriving at your destination.");
 			writeText("The imaginatively-named 'Town Guild Hall' looks a bit shabby from the outside, and not too much better on the inside, but it's at least functional. Not a bad place to get started from, all things considered.");
-			writeText("Walking in, you spot a few half-familiar faces - bartender, barmaid, town bicycle, et cetera. More importantly, you can tell from the date listed on the quest board that some new requests have been added since you left.");
-			writeText("Time to get to work.");
+			writeText("Walking in, you spot a few half-familiar faces - trusty and nondescript bartender, brilliantly busty barmaid, loose-lipped town bicycle, et cetera. More importantly, you can tell from the date listed on the quest board that some new requests have been added since you left.");
+			writeTransition("questBoard","Time to get to work");
+			break;
+		}
+		case "questBoard" : {
 			if(data.story.kobold1 == false){
 				writeTransition("guildQuestKobold","A kobold attacked a noble in the woods recently [-1 STA]");
 			}
@@ -171,6 +174,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "guildQuestKobold" : {
+			data.story.kobold1 = true;
 			data.story.playerSta -=1;
 			updateMenu();
 			writeText("The quest seems fairly straightforward - a kobold attacked some noble, took a bit of his money, and left. There's a brief description of the target (short, brown scales), but the whole job seems a bit sparse on the details of what actually happened.");
@@ -201,6 +205,10 @@ function writeScene(scene) {
 		case "forestKobold" : {
 			data.story.kobold1 = true;
 			data.story.playerSta -=1;
+			if(data.story.playerSta < 1){
+				writeText("You're too tired for that, and the next Fate isn't implemented yet.");
+				break;
+			}
 			updateMenu();
 			if(data.story.playerAgl > 0){
 				writeText("After you've finished putting away everything, you grab your stuff and walk through the gaps between the trees, carefully watching your footing as you do. You have a bit of trouble at first, but you get used to it quickly and start making good time.");
@@ -441,7 +449,7 @@ function writeScene(scene) {
 			writeText("On the downside, even in the evening, there's still people who might see you in the streets...<br>");
 			writeText("<b>CryptoGreek here. Writing the full-on sex scene with all of those fetishes would take forever so, unless someone finally starts commissioning my short-story-writing again, I'll leave it there. Besides, this is a joke path anyway. I mean, this is a porn game. Did you really think you could talk the horny kobold into a convent or something? Stepfordization ain't my fetish, man.</b>");
 			data.story.taintedSlippery = true;
-			writeTransition("forestKoboldComplete", "Sneak home shamefully, rinse the sexual fluids off, and turn in the quest");
+			writeTransition("forestKoboldCompleteShame", "Sneak off shamefully, rinse the sexual fluids off, and turn in the quest");
 			break;
 		}
 		case "forestKoboldSubby" : {
@@ -462,8 +470,26 @@ function writeScene(scene) {
 			writeTransition("forestKoboldComplete", "Wash off and head to the guild hall") 
 			break;
 		}
+		case "forestKoboldCompleteShame" : {
+			writeText("You walk back to town, never having been as thankful for the protective wards on the main road that keep most monsters from ambushing helpless humans.");
+			writeText("Arriving at the guild hall, you sneak past everyone you can and head to the backroom, where more than a few hunters have had to wash away fluids of all sorts. You even managed to get past almost everyone, but a knowing look from the town bicycle just as you're about to leave sight causes your face to go red.");
+			writeText("After you finish cleaning yourself off, you take a few minutes to collect yourself before heading out to turn in your quest.");
+			writeScene("forestKoboldComplete2");
+			break;
+		}
 		case "forestKoboldComplete" : {
-			writeText("This isn't done yet.");
+			writeText("With the job complete, you head back to the guild hall. Fortunately for everyone, there's a backroom set up for hunters to wash away whatever assorted grime or fluids they've <i>accumulated</i>, which you immediately use upon arrival, if only for the sake of everyone elses' noses.");
+			writeText("After you finish rinsing kobold femcum off of your <i>everything</i>, you head back out to the main room to turn in your quest.");
+			writeScene("forestKoboldComplete2");
+			break;
+		}
+		case "forestKoboldComplete2" : {
+			writeText("It's a short, quick affair of showing the Essence of the kobold to the currently-nondescript bartender, who quickly appraises it with a nod.");
+			writeText("He does give you a quick reminder, though, that you'll need to be careful about how much Essence you go collecting. Carrying too much can cause... <i>problems</i> for hunters. And not the sexy kind, either - when a human ends up Tainted, it usually just ends up with the guy or girl mindlessly masturbating themselves into a dehydrated delirium.");
+			writeText("It's better to just carry a couple Tainted Essences at a time, or just use the less-dangerous Neutral Essences instead.");
+			writeText("Since it's your only Tainted Essence, though, it's not like you're in danger, so the bartender just confirms that you completed the quest, hands you a bag of copper coins, and wishes you good luck in your next quest.");
+			writeTransition("questBoard", "Look at another quest");
+			writeText("<b><i>[Cryptogreek here, for an immersion-breaking statement. I might end up employing an Easy Mode where you have no actual limits on the Essences you're allowed to carry (since I already have a functioning Inventory system that does that), but a large part of Caption Quest is meant to be inventory/resource management. When the game is more developed, you'll probably have a better time playing Normal Mode than on Easy. Thanks!]</i></b>");
 			break;
 		}
 		case "yourSisterArrives" : {
