@@ -408,6 +408,7 @@ function writeScene(scene) {
 		}
 		case "forestKoboldAgiWinFuck" : {
 			data.story.playerEss += 1;
+			console.log("essence is "+data.story.playerESS);
 			updateMenu();
 			writeText("You grab the back of her head and press it into the ground, the impact accentuated with her butt tensing against you.");
 			writeText("She starts moaning into the dirt as you pull your pants down enough to pop your dick out. Given a kobold's strong sense of smell, it's not hard to figure out why her snatch is practically drooling at this point.");
