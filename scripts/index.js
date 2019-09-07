@@ -35,7 +35,7 @@ var endingsLocked = {
 var data = {
 	story: {
 		name: "???", version: 0.8, freeSample: false,
-		currentScene: "start", money: 20, route: "dom", skill: 0, playingGame: false,
+		currentScene: "start", money: 20, route: "dom", skill: 0, playingGame: false, easyMode: false,
 
 		curseInfertile: false, curseNarcissus: false, curseKindness: false, curseSubmission: false,
 		taintedSlippery: false,

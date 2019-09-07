@@ -7,11 +7,28 @@ function writeScene(scene) {
 			writeText("He has a patreon at https://www.patreon.com/noodlejacuzzi<br>I did steal his code and all (again, with permission), so check him out. Also, he does commissions for whole games in this style, which is fucking bananas. You can also hit his Discord up at NoodleJacuuzi#4120.");
 			writeText("As an additional note, you can click on the title of a window to close it. For example, if you click 'INVENTORY' on the left there, you can close the new window by clicking anywhere in the 'INVENTORY' section at the top.");
 			writeTransition("prologue", "Start the game");
-			
+			writeTransition("prologueEasy","Play the game on Easy Mode");
 			break;
 		}
 		//Prologue
+		case "prologueEasy" : {
+			writeText("Playing on Easy Mode lets you hold an unlimited number of Tainted Essences.");
+			writeText("It also unlocks an option where, if you complete an event but gain absolutely nothing from it (such as due to the effects of a curse), you can choose not to expend stamina.");
+			writeText("As a warning, this isn't how the game is designed to be played, so you might encounter some balance issues.");
+			writeText("Do you want to play on Easy Mode?");
+			writeTransition("prologue","Play on Normal");
+			writeTransition("prologueEasy2","Play on Easy");
+			break;
+		}
+		case "prologueEasy2" : {
+			data.story.easyMode = true;
+			writeScene("prologue");
+			break;
+		}
 		case "prologue" : {
+			if(data.story.easyMode == true){
+				writeText("<b><i>Difficulty set to Easy Mode.</i></b>");
+			}
 			data.story.bodytype = 1;
 			writeText("Waking up in the middle of the night isn't the most comfortable feeling in the world, especially when it's to the sound of a voice you don't recognize and you have no idea where you are.");
 			writeText("You felt uncomfortable but, oddly, no panic. No fear. The voice wasn't familiar, but it was almost soothing, and you realized that the reason you didn't recognize your surroundings wasn't because you woke up somewhere abnormal.");
@@ -135,7 +152,7 @@ function writeScene(scene) {
 				writeText("You can barely keep your hand off of it as you sit up, your sleeping bag feeling roomier than when you  went to sleep. Your shirt rubs against your chest, hot flashes running through your head - not images, just emotions, and the sensation of serving something, <i>anything</i> greater...");
 				writeText("Clearly, it wasn't just a dream.");
 				writeText("You have a patron deity, now, which should be interesting. The stories of gods <i>blessing</i> mortals were always interesting ones, even if they would sometimes end... poorly. Though, given how frequently that involves some monster pinning the <i>'hero'</i> down, you're not sure you have a problem with that...");
-				writeText("Still, with... <i>someone's</i> blessing, you should be agile enough to avoid getting into too much trouble (unless you <i>want</i> trouble, of course), so it's not really worth sticking around thinking about when you could be adventuring.");
+				writeText("Still, with... <i>someone's</i> blessing, you feel lucky enough that you should be able to avoid most kinds of trouble (unless you <i>want</i> trouble, of course), so it's not really worth sticking around thinking about when you could be adventuring.");
 			}
 			writeText("You set-up camp last night pretty quickly, staying a bit closer to the river than you'd really meant to - you must've been more tired from the day's journey than you thought. Still, you weren't jumped in your sleep by anything (or anyone), so it should be fine this time.");
 			writeText("Still, packing up camp is sooner, rather than later, is probably for the best. If you're waking up, there's no telling what else is coming down to the river for a morning drink.");
@@ -178,9 +195,9 @@ function writeScene(scene) {
 				writeText("You're too tired for that, and the next Fate isn't implemented yet.");
 				break;
 			}
-			updateMenu();
 			data.story.kobold1 = true;
 			data.story.playerSta -=1;
+			updateMenu();
 			writeText("The quest seems fairly straightforward - a kobold attacked some noble, took a bit of his money, and left. There's a brief description of the target (short, brown scales), but the whole job seems a bit sparse on the details of what actually happened.");
 			writeText("Of course, if it's a Tainted kobold, that would make sense. Not too many people are willing to include the more lurid parts of those encounters, save for the exhibitionists. There's a good chance your employer ended up taking a ride on the wild side against his will.");
 			writeText("Either way, a quest's a quest, and the pay's... fine. You tell the excessively busty barmaid (a reliable staple of all guild halls) that you're taking this quest and, a few minutes later, you're on your way.");
