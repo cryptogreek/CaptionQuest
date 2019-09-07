@@ -507,6 +507,7 @@ function writeScene(scene) {
 			writeText("It claims that it's a Tainted mothman, meaning that it <i>should</i> be more interested in sex than lights, but maybe some habits run too deep?");
 			writeText("Either way, you tell the nondescript bartender that you're on the job. The barmaid makes sure you leave the place with a lantern, just in case you didn't have one already.");
 			writeTransition("guildQuestMothman2", "Rest until nightfall");
+			break;
 		}
 		case "guildQuestMothman2" : {
 			writeText("Navigating the woods at night is much harder than you'd like - whenever your lantern is bright enough to illuminate all of the roots near you, it makes everything more than ten feet away seem that much darker.");
@@ -515,6 +516,9 @@ function writeScene(scene) {
 			writeText("At least it's not completely silent. The soft hum of crickets fills the quiet forest, save for the occassional bout of silence when something spooks them. It's generally a sign that some idiot is running around out here.");
 			writeText("Speaking of, they're quieting down a bit right now. You slow down and listen carefully for the sound of crunching twigs...");
 			if(data.story.playerAgl < 1 || data.story.curseSubmission){
+				if(data.story.playerAgl < 1 && data.story.curseSubmission == false){
+					writeText("<b>AGI test <i>failed.</i></b>");
+				}
 				writeText("By the time you hear the wingbeats behind you, it's already too late.");
 				writeText("The mothman slams into your back, throwing the both of you to the ground. The worst part, though, is the sound of breaking glass.");
 				writeText("There's a momentary look of honest confusion on his face as he stands, the impact knocking his pants loose as he freezes.");
@@ -523,6 +527,9 @@ function writeScene(scene) {
 				writeSpeech("Moth","images/CQ/icons/mothman.png","<i><b>The light!</b></i>");
 				writeText("He immediately whirls on you, his voice desperate as his eyes seem to almost glow red in the darkness from the glinting moonlight.");
 				if(data.story.playerMag < 1 || data.story.curseSubmission){
+					if(data.story.playerMag < 1 && data.story.curseSubmission == false){
+						writeText("<b>MAG test <i>failed.</i></b>");
+					}
 					writeText("Unfortunately, without some way to repair the lantern, it doesn't seem like you'll be able to avoid fighting this thing.");
 					writeText("You get ready to fight-");
 					writeText("-but are immediately blinded as a wave of small, shiny scales are launched right at you.");
@@ -585,9 +592,11 @@ function writeScene(scene) {
 					writeText("With that, he just leaps into the air and flies off, leaving your body soaked in sweat, moth-glitter, and what feels like more than half a gallon of hot bug semen spilling out of you.");
 					writeText("When you're finally able to stand up, feeling completely defeated, you resign yourself to heading back to town and just pretending you never found the moth.");
 					writeText("Half-shambling, half-limping, you slowly return to the guild hall to clean up, sleep, and eat... Even if you do already feel full...");
+					writeTransition("guildHallMissionComplete", "Return to the guild hall");
 					break;
 				}
 				else{
+					writeText("<b>MAG test <i>passed.</i></b>");
 					writeText("Thinking quickly, you grab the lantern with one hand and hold the other up in a placating manner.");
 					writeText("You focus on the lantern, trying to feel what's wrong with it using your... <i>limited</i> magical abilities.");
 					writeText("Fortunately, he pauses and gives you enough time to feel out the problem.");
@@ -604,6 +613,7 @@ function writeScene(scene) {
 				}
 			}
 			else{
+				writeText("<b>AGI test <i>passed.</i></b>");
 				writeText("When you hear the wingbeats coming from behind you, you barely have the time to leap out of the way.");
 				writeText("It clearly didn't count on you dodging, as it crashes pretty heavily into the ground in front of you.");
 				writeSpeech("Moth","images/CQ/icons/mothman.png","A-Ah!");
@@ -678,11 +688,13 @@ function writeScene(scene) {
 			writeSpeech("Moth","images/CQ/icons/mothman.png","Thank you <i>so much,</i> human! I'll never forget your niceness!");
 			writeText("With that, he takes off flying into the air, hovering just above the tree line before darting away.");
 			writeText("That was... nice. Looks like he won't attack anyone for a while, at least.");
-			writeTransition("guildHallMissionComplete");
+			writeTransition("guildHallMissionComplete", "Return to the guild hall");
+			break;
 		}
 		case "guildHallMissionComplete" : {
 			writeText("Neat, you won. Unfortunately, the next section isn't ready yet, so clicking below will warp you to the guild-return scene for the kobold mission. I'll fix this later.");
-			writeTransition("forestKoboldComplete2");
+			writeTransition("forestKoboldComplete2", "Return to the guild hall, but with a continuity error");
+			break;
 		}
 
 
