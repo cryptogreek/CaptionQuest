@@ -610,6 +610,9 @@ function writeScene(scene) {
 					writeText("When you're finally able to stand up, feeling completely defeated, you resign yourself to heading back to town and just pretending you never found the moth.");
 					writeText("Half-shambling, half-limping, you slowly return to the guild hall to clean up, sleep, and eat... Even if you do already feel full...");
 					writeTransition("guildHallMissionComplete", "Return to the guild hall");
+					if(data.story.easyMode){
+						writeTransition("easyModeMothmanLoss","[EASY MODE] Regain your stamina and return to the guild hall");
+					}
 					break;
 				}
 				else{
@@ -712,6 +715,13 @@ function writeScene(scene) {
 			writeText("Neat, you won. Unfortunately, the next section isn't ready yet, so clicking below will warp you to the guild-return scene for the kobold mission. I'll fix this later.");
 			writeTransition("forestKoboldComplete2", "Return to the guild hall, but with a continuity error");
 			break;
+		}
+		case "easyModeMothmanLoss" : {
+			writeText("Despite feeling tired, the spite you feel from getting nothing jizzed on from the moth drives you forward.");
+			writeText("<i><b>You feel your spite restoring your stamina.</b></i>");
+			data.story.playerSta +=1;
+			updateMenu();
+			writeTransition("guildHallMissionComplete","Return to the guild hall");
 		}
 
 
