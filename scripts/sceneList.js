@@ -176,6 +176,10 @@ function writeScene(scene) {
 		case "guildQuestKobold" : {
 			data.story.kobold1 = true;
 			data.story.playerSta -=1;
+			if(data.story.playerSta < 1){
+				writeText("You're too tired for that, and the next Fate isn't implemented yet.");
+				break;
+			}
 			updateMenu();
 			writeText("The quest seems fairly straightforward - a kobold attacked some noble, took a bit of his money, and left. There's a brief description of the target (short, brown scales), but the whole job seems a bit sparse on the details of what actually happened.");
 			writeText("Of course, if it's a Tainted kobold, that would make sense. Not too many people are willing to include the more lurid parts of those encounters, save for the exhibitionists. There's a good chance your employer ended up taking a ride on the wild side against his will.");
