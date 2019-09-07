@@ -510,7 +510,9 @@ function writeScene(scene) {
 			writeText("It's better to just carry a couple Tainted Essences at a time, or just use the less-dangerous Neutral Essences instead.");
 			writeText("Since it's your only Tainted Essence, though, it's not like you're in danger, so the bartender just confirms that you completed the quest, hands you a bag of copper coins, and wishes you good luck in your next quest.");
 			writeTransition("questBoard", "Look at another quest");
-			writeText("<b><i>[Cryptogreek here, for an immersion-breaking statement. I might end up employing an Easy Mode where you have no actual limits on the Essences you're allowed to carry (since I already have a functioning Inventory system that does that), but a large part of Caption Quest is meant to be inventory/resource management. When the game is more developed, you'll probably have a better time playing Normal Mode than on Easy. Thanks!]</i></b>");
+			if(data.story.easyMode == false){
+				writeText("<b><i>[CryptoGreek here, for an immersion-breaking statement. I might end up employing an Easy Mode where you have no actual limits on the Essences you're allowed to carry (since I already have a functioning Inventory system that does that), but a large part of Caption Quest is meant to be inventory/resource management. When the game is more developed, you'll probably have a better time playing Normal Mode than on Easy. Thanks!]</i></b>");
+			}
 			break;
 		}
 		case "guildQuestMothman" : {
@@ -722,6 +724,7 @@ function writeScene(scene) {
 			data.story.playerSta +=1;
 			updateMenu();
 			writeTransition("guildHallMissionComplete","Return to the guild hall");
+			break;
 		}
 
 
