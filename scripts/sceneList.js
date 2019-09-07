@@ -710,6 +710,7 @@ function writeScene(scene) {
 			writeSpeech("Moth","images/CQ/icons/mothman.png","Thank you <i>so much,</i> human! I'll never forget your niceness!");
 			writeText("With that, he takes off flying into the air, hovering just above the tree line before darting away.");
 			writeText("That was... nice. Looks like he won't attack anyone for a while, at least.");
+			data.story.taintedMoth = true;
 			writeTransition("guildHallMissionComplete", "Return to the guild hall");
 			break;
 		}

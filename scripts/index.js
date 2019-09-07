@@ -38,7 +38,7 @@ var data = {
 		currentScene: "start", money: 20, route: "dom", skill: 0, playingGame: false, easyMode: false,
 
 		curseInfertile: false, curseNarcissus: false, curseKindness: false, curseSubmission: false,
-		taintedSlippery: false,
+		taintedSlippery: false, taintedMoth: false,
 
 		popRocks: 0, caramelMelts: 0, plugPops: 0, stretchyTaffy: 0, fruitGushers: 0, 
 		vrMachine: false, princessGame: false, zombieGame: false, laptop: false, creamer: false, doll: false, toy: false, horse: false, onahole: false,
@@ -2012,6 +2012,17 @@ function generateInv() {
 			<div class="tooltip">
 				<img class ="itemImage" src="images/CQ/items/kobold1.jpg">
 				<span class ="tooltiptext">This Tainted Essence makes sure you're always <i>just</i> slick enough to squeeze through tight passages, sexual or otherwise... Unless you're grabbed or blocked by people, oddly enough.</span>
+			</div>
+		</div>
+		`;
+	}
+		if (data.story.taintedMoth == true) {
+		document.getElementById('windowLeft').innerHTML += `
+		<div class = "item">
+			<p class = "itemName">Mothman Essence</p>
+			<div class="tooltip">
+				<img class ="itemImage" src="images/CQ/items/kobold1.jpg">
+				<span class ="tooltiptext">This Tainted Essence doesn't have a description or effect yet.</span>
 			</div>
 		</div>
 		`;
