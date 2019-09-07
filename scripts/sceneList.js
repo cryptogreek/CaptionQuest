@@ -684,6 +684,8 @@ function writeScene(scene) {
 			break;
 		}
 		case "guildQuestMothmanAgiWinFuck2" : {
+			data.story.taintedMoth = true;
+			console.log("taintedMoth set to "+data.story.taintedMoth);
 			writeSpeech("Moth","images/CQ/icons/mothman.png","U-Uwaaa...~! L-Light...!");
 			writeText("He tries to keep his eyes on the lantern, muttering 'light' over and over like a mantra.");
 			writeText("Each time your thrust causes him to stutter or stop, you get a little bit more turned on.");
@@ -710,7 +712,6 @@ function writeScene(scene) {
 			writeSpeech("Moth","images/CQ/icons/mothman.png","Thank you <i>so much,</i> human! I'll never forget your niceness!");
 			writeText("With that, he takes off flying into the air, hovering just above the tree line before darting away.");
 			writeText("That was... nice. Looks like he won't attack anyone for a while, at least.");
-			data.story.taintedMoth = true;
 			writeTransition("guildHallMissionComplete", "Return to the guild hall");
 			break;
 		}
