@@ -169,18 +169,18 @@ function writeScene(scene) {
 			writeTransition("endOfContent","A [unknown] has been sighted near the local lake [-1 STA] [BROKEN]");
 			writeTransition("endOfContent","A clergyman wants the broken-down church to the north cleared out [-1 STA] [BROKEN]");
 			if(data.story.mothman1 == false){
-				writeTransition("endOfContent","A mothman has been attacking people during the night [-1 STA]");
+				writeTransition("guildQuestMothman","A mothman has been attacking people during the night [-1 STA]");
 			}
 			break;
 		}
 		case "guildQuestKobold" : {
-			data.story.kobold1 = true;
-			data.story.playerSta -=1;
 			if(data.story.playerSta < 1){
 				writeText("You're too tired for that, and the next Fate isn't implemented yet.");
 				break;
 			}
 			updateMenu();
+			data.story.kobold1 = true;
+			data.story.playerSta -=1;
 			writeText("The quest seems fairly straightforward - a kobold attacked some noble, took a bit of his money, and left. There's a brief description of the target (short, brown scales), but the whole job seems a bit sparse on the details of what actually happened.");
 			writeText("Of course, if it's a Tainted kobold, that would make sense. Not too many people are willing to include the more lurid parts of those encounters, save for the exhibitionists. There's a good chance your employer ended up taking a ride on the wild side against his will.");
 			writeText("Either way, a quest's a quest, and the pay's... fine. You tell the excessively busty barmaid (a reliable staple of all guild halls) that you're taking this quest and, a few minutes later, you're on your way.");
@@ -321,61 +321,61 @@ function writeScene(scene) {
 			break;
 		}
 		case "forestKoboldAgiWin" : {
-				writeText("Suddenly, there's a rustling behind you.");
-				if(data.story.playerAgl>0){
-					writeText("<b>AGI test <i>passed.</i></b>");
-				}
-				else{
-					writeText("Everything seems to slow down for just a moment, but it's enough.");
-					writeText("<b>AGI test <i><strike>failed</strike>passed.</i>");	
-				}
-				writeText("You barely manage to dodge to the side, something small barely able to wrap its hands around your ankle as you turn.");
-				writeText("Unfortunately for the creature, you're easily able to crouch down and grab it from your position, securing it tightly.");
-				writeText("Or, securing <i>her</i>, you should say. Getting a strong hold on her meant grabbing near center-mass, and the lizard-girl is a little... <i>bottom-heavy.</i>");
-				writeText("She just kinda stops for a moment, her breathing hitching as she looks over your shoulder at your hands as they grasp around her ass.");
-				writeBig("images/CQ/content/scene002-2.jpg");
-				writeSpeech("Kobold","images/CQ/icons/kobold1.jpg","...Huh. And I thought <i>I</i> was being forward.");
-				writeText("She shifts around a little bit, getting flushed as you get an eyeful of her snatch. You can see her getting wetter by the second, the musk unmistakeable musk of arousal hitting you like a train.");
-				if(data.story.curseSubmission){
-					writeText("Your body reacts strongly to the smell, a hand moving to your expanding dick as you realize how close her ass is to your face. A moment too late, you realize your mistake.");
-					writeText("She suddenly throws her ass against your face, the plush sensation causing no pain as you lose your balance. You shout in surprise, but your mouth is quickly covered by her moist lips as you hear her laugh.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Ha~! Holy shit, how pent-up do you have to be to just let go at the first whiff of my scent? Do humans go into heat too?");
-					writeText("You reach up to try and push her off, but she brings her legs back and presses her calves against your wrists, pinning you completely.");
-					writeText("A moment later, you feel her gloved hands press down on your thighs. You should be able to kick about anyway, but you can't even seem to bring yourself to do anything but moan as she presses her face into your crotch.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Mm... Going by the smell, I'm not the only one in need of a little release, am I? You're practically tearing through these pants of yours, so let's try letting it out for a second, hm?");
-					writeText("You feel her pussy start to get wetter on your lips, the smell of her arousal getting even stronger as the breeze hits your cock.");
-					writeText("You can tell how strong your own arousal must have smelled from the way she nearly squirted onto your face.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","F-Fuck. You're bigger than I expected, humie. If I'm going to fit this inside...");
-					writeText("She pushes her ass onto your face harder, adjusting her position with a quick jiggle.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","...then you'd better get <i><b>licking.</b></i>");
-					writeText("Unable to stop yourself, you immediately start tonguing her slit. Unable to see past her heavy ass, you have to navigate by touch, making it hard to aim... Not that she seems to mind your movements.");
-					writeText("A moment later, you try (and fail) to stifle a moan into her cunt as her long, rough tongue starts grasping your length, climbing up and down for a few seconds before stopping.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","H-How's it feel, humie?");
-					writeText("Her gloved-hand starts working your slick shaft, her thumb teasing your head.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Are you enjoying being my little <i>l-loveseat?</i> From how hard and... <i>big</i> you're getting, I'd think this was your fetish~!");
-					writeText("You can feel yourself throbbing even harder in her hand, confirming it.");
-					writeText("Then, suddenly, she stops.");
-					writeText("She practically whirls around, your lips making a faint <i>POP</i> as they separate from her pussy (almost as loud as her moan).");
-					writeText("Before you can even think about why, you feel her ass crash down on your chest, soaking your shirt in your spit and her arousal.");
-					writeText("She leans in close to your face, her tongue flicking against your lips for a moment.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Bark for me.");
-					writeText("You jump slightly as her tail rubs up against you, the rough sensation of her semi-slick scales ripping a moan from your throat.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","I've seen kobold-<i>pups</i> with more dominance than you. You're just some human-puppy that's more desperate for release than a <i>heat-stricken <b>bitch,</b></i>. So <i>bark for me.</i>");
-					writeText("For a brief, brief moment, you manage to restrain yourself, to hold onto enough pride to keep your mouth shut.");
-					writeText("Then she stops her tail, and you break.");
-					writeText("You open your mouth to bark, but all that really comes out is a half-moaned mewl. Going by the look in her eyes, though, it was still enough.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Nnn~! Now <i>that's</i> a good pup... And seeing as I'm such a kind little master, I think that that's worth a special little <i>treat~!</i>");
-					writeText("With that, she raises her ass off of your chest, slides further back, and angles you with her tail. You can feel your tip just barely touching her lips, teasing you gently for a few agonizingly long seconds, before...");
-					writeText("She slams the full-weight of her massive hips down on your crotch, sinking balls-deep in one carefully aimed thrust as she moans loud enough that it scares away the birds.");
-					writeText("She stops even trying to speak or tease you, instead throwing herself onto your cock like cock-crazed whore. Her breathy moans only turn you on more as you dig your fingers into the dirt, already nearing release almost pathetically fast.");
-					writeText("When you start spurting inside her, you half-expected her to slow down, but it only makes her redouble her efforts as she starts rapidly clenching around you.");
-					writeText("She's cumming from the sensation of getting filled up.");
-					writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","More, more...! <i>Fill me up even more, pup~!</i>");
-					writeText("Her orgasmic-clenching milks your full length even more, your body seemingly ignoring your refractory period as you launch a second load into her, and a third less than a minute after that.");
-					writeText("Your vision goes white as she rides you harder with each spurt into her womb.");
-					writeText("After only a minute more, you feel yourself lose consciousness...");
-					writeTransition("forestKoboldSubby", "Wake up after a while");
-					break;
+			writeText("Suddenly, there's a rustling behind you.");
+			if(data.story.playerAgl>0){
+				writeText("<b>AGI test <i>passed.</i></b>");
+			}
+			else{
+				writeText("Everything seems to slow down for just a moment, but it's enough.");
+				writeText("<b>AGI test <i><strike>failed</strike>passed.</i>");	
+			}
+			writeText("You barely manage to dodge to the side, something small barely able to wrap its hands around your ankle as you turn.");
+			writeText("Unfortunately for the creature, you're easily able to crouch down and grab it from your position, securing it tightly.");
+			writeText("Or, securing <i>her</i>, you should say. Getting a strong hold on her meant grabbing near center-mass, and the lizard-girl is a little... <i>bottom-heavy.</i>");
+			writeText("She just kinda stops for a moment, her breathing hitching as she looks over your shoulder at your hands as they grasp around her ass.");
+			writeBig("images/CQ/content/scene002-2.jpg");
+			writeSpeech("Kobold","images/CQ/icons/kobold1.jpg","...Huh. And I thought <i>I</i> was being forward.");
+			writeText("She shifts around a little bit, getting flushed as you get an eyeful of her snatch. You can see her getting wetter by the second, the musk unmistakeable musk of arousal hitting you like a train.");
+			if(data.story.curseSubmission){
+				writeText("Your body reacts strongly to the smell, a hand moving to your expanding dick as you realize how close her ass is to your face. A moment too late, you realize your mistake.");
+				writeText("She suddenly throws her ass against your face, the plush sensation causing no pain as you lose your balance. You shout in surprise, but your mouth is quickly covered by her moist lips as you hear her laugh.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Ha~! Holy shit, how pent-up do you have to be to just let go at the first whiff of my scent? Do humans go into heat too?");
+				writeText("You reach up to try and push her off, but she brings her legs back and presses her calves against your wrists, pinning you completely.");
+				writeText("A moment later, you feel her gloved hands press down on your thighs. You should be able to kick about anyway, but you can't even seem to bring yourself to do anything but moan as she presses her face into your crotch.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Mm... Going by the smell, I'm not the only one in need of a little release, am I? You're practically tearing through these pants of yours, so let's try letting it out for a second, hm?");
+				writeText("You feel her pussy start to get wetter on your lips, the smell of her arousal getting even stronger as the breeze hits your cock.");
+				writeText("You can tell how strong your own arousal must have smelled from the way she nearly squirted onto your face.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","F-Fuck. You're bigger than I expected, humie. If I'm going to fit this inside...");
+				writeText("She pushes her ass onto your face harder, adjusting her position with a quick jiggle.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","...then you'd better get <i><b>licking.</b></i>");
+				writeText("Unable to stop yourself, you immediately start tonguing her slit. Unable to see past her heavy ass, you have to navigate by touch, making it hard to aim... Not that she seems to mind your movements.");
+				writeText("A moment later, you try (and fail) to stifle a moan into her cunt as her long, rough tongue starts grasping your length, climbing up and down for a few seconds before stopping.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","H-How's it feel, humie?");
+				writeText("Her gloved-hand starts working your slick shaft, her thumb teasing your head.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Are you enjoying being my little <i>l-loveseat?</i> From how hard and... <i>big</i> you're getting, I'd think this was your fetish~!");
+				writeText("You can feel yourself throbbing even harder in her hand, confirming it.");
+				writeText("Then, suddenly, she stops.");
+				writeText("She practically whirls around, your lips making a faint <i>POP</i> as they separate from her pussy (almost as loud as her moan).");
+				writeText("Before you can even think about why, you feel her ass crash down on your chest, soaking your shirt in your spit and her arousal.");
+				writeText("She leans in close to your face, her tongue flicking against your lips for a moment.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Bark for me.");
+				writeText("You jump slightly as her tail rubs up against you, the rough sensation of her semi-slick scales ripping a moan from your throat.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","I've seen kobold-<i>pups</i> with more dominance than you. You're just some human-puppy that's more desperate for release than a <i>heat-stricken <b>bitch,</b></i>. So <i>bark for me.</i>");
+				writeText("For a brief, brief moment, you manage to restrain yourself, to hold onto enough pride to keep your mouth shut.");
+				writeText("Then she stops her tail, and you break.");
+				writeText("You open your mouth to bark, but all that really comes out is a half-moaned mewl. Going by the look in her eyes, though, it was still enough.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Nnn~! Now <i>that's</i> a good pup... And seeing as I'm such a kind little master, I think that that's worth a special little <i>treat~!</i>");
+				writeText("With that, she raises her ass off of your chest, slides further back, and angles you with her tail. You can feel your tip just barely touching her lips, teasing you gently for a few agonizingly long seconds, before...");
+				writeText("She slams the full-weight of her massive hips down on your crotch, sinking balls-deep in one carefully aimed thrust as she moans loud enough that it scares away the birds.");
+				writeText("She stops even trying to speak or tease you, instead throwing herself onto your cock like cock-crazed whore. Her breathy moans only turn you on more as you dig your fingers into the dirt, already nearing release almost pathetically fast.");
+				writeText("When you start spurting inside her, you half-expected her to slow down, but it only makes her redouble her efforts as she starts rapidly clenching around you.");
+				writeText("She's cumming from the sensation of getting filled up.");
+				writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","More, more...! <i>Fill me up even more, pup~!</i>");
+				writeText("Her orgasmic-clenching milks your full length even more, your body seemingly ignoring your refractory period as you launch a second load into her, and a third less than a minute after that.");
+				writeText("Your vision goes white as she rides you harder with each spurt into her womb.");
+				writeText("After only a minute more, you feel yourself lose consciousness...");
+				writeTransition("forestKoboldSubby", "Wake up after a while");
+				break;
 				}
 			writeSpeech("Kobold", "images/CQ/icons/kobold1.jpg","So... You, uh... Gonna do something?");
 			writeText("Grabbing her ass tighter, you quickly pin her to the ground. She hits the ground chest-first pretty solidly but, instead of a grunt of pain, you hear a muffled moan, along with a whisper.");
@@ -496,6 +496,199 @@ function writeScene(scene) {
 			writeText("<b><i>[Cryptogreek here, for an immersion-breaking statement. I might end up employing an Easy Mode where you have no actual limits on the Essences you're allowed to carry (since I already have a functioning Inventory system that does that), but a large part of Caption Quest is meant to be inventory/resource management. When the game is more developed, you'll probably have a better time playing Normal Mode than on Easy. Thanks!]</i></b>");
 			break;
 		}
+		case "guildQuestMothman" : {
+			if(data.story.playerSta < 1){
+				writeText("You're too tired for that, and the next Fate isn't implemented yet.");
+				break;
+			}
+			data.story.mothman1 = true;
+			data.story.playerSta -=1;
+			writeText("According to the quest details, a mothman's been attacking people in the woods during the night and taking their lanterns or other light sources. You'd think that that'd get them to stop wandering the woods after dusk, but it probably wouldn't stop even if the attacks were from something <i>actually dangerous.</i>.");
+			writeText("It claims that it's a Tainted mothman, meaning that it <i>should</i> be more interested in sex than lights, but maybe some habits run too deep?");
+			writeText("Either way, you tell the nondescript bartender that you're on the job. The barmaid makes sure you leave the place with a lantern, just in case you didn't have one already.");
+			writeTransition("guildQuestMothman2", "Rest until nightfall");
+		}
+		case "guildQuestMothman2" : {
+			writeText("Navigating the woods at night is much harder than you'd like - whenever your lantern is bright enough to illuminate all of the roots near you, it makes everything more than ten feet away seem that much darker.");
+			writeText("It doesn't help that the moonlight is faint tonight, plunging everything into an eerie darkness. You're not in dangerous territory or anything, but you can't help but dart your eyes towards suspicious shadows every few seconds.");
+			writeText("Seconds turn into minutes, and it's not too long before those minutes become hours. Staying constantly on-edge probably isn't great for your health, but it's not like you can relax out here.");
+			writeText("At least it's not completely silent. The soft hum of crickets fills the quiet forest, save for the occassional bout of silence when something spooks them. It's generally a sign that some idiot is running around out here.");
+			writeText("Speaking of, they're quieting down a bit right now. You slow down and listen carefully for the sound of crunching twigs...");
+			if(data.story.playerAgl < 1 || data.story.curseSubmission){
+				writeText("By the time you hear the wingbeats behind you, it's already too late.");
+				writeText("The mothman slams into your back, throwing the both of you to the ground. The worst part, though, is the sound of breaking glass.");
+				writeText("There's a momentary look of honest confusion on his face as he stands, the impact knocking his pants loose as he freezes.");
+				writeBig("images/CQ/content/scene003-raw.png");
+				writeText("Another second goes by, and his expression twists into anger.");
+				writeSpeech("Moth","images/CQ/icons/mothman.png","<i><b>The light!</b></i>");
+				writeText("He immediately whirls on you, his voice desperate as his eyes seem to almost glow red in the darkness from the glinting moonlight.");
+				if(data.story.playerMag < 1 || data.story.curseSubmission){
+					writeText("Unfortunately, without some way to repair the lantern, it doesn't seem like you'll be able to avoid fighting this thing.");
+					writeText("You get ready to fight-");
+					writeText("-but are immediately blinded as a wave of small, shiny scales are launched right at you.");
+					if(data.story.curseSubmission){
+						writeText("Unable to see, you can only shout pathetically as you feel the moth tackle you, his small frame still larger than yours as he easily pins you.");
+					}
+					else{
+						writeText("Unable to see, you can only shout wildly as you feel the moth tackle you, knocking the both of you over a root. A second later, and he has you pinned.");
+					}
+					writeText("You're unable to move, can barely see, and the moth is close enough that you can feel his breath on your face.");
+					writeSpeech("Moth","images/CQ/icons/mothman.png","Human...! Give me light!");
+					writeText("You try to tell him that you don't <i>have</i> any other light, but he doesn't seem to listen.");
+					writeText("Then, he sees your eyes.");
+					writeSpeech("Moth","images/CQ/icons/mothman.png","There...! There's light in your eyes!");
+					writeText("It takes a second, but you realize that, considering the blinding scales, your eyes had started watering, and your tears were reflecting the moonlight.");
+					writeText("It leans in even closer to your face, its expression conveying rapture as it presses against you.");
+					writeText("A moment later, you start to feel something press strongly against your crotch.");
+					writeText("Without breaking eye-contact, you can feel your pants violently being pulled down as you try and hold as still as possible.");
+					writeText("The cool air runs across your exposed lower body, but your focus quickly lands on the hard heat pressing against your anus.");
+					writeSpeech("Moth","images/CQ/icons/mothman.png","Your light feels <i>so good...!</i>");
+					if(data.story.curseSubmission){
+						writeText("With just that, he thrusts into your tight ass as your hands grasp at his fluff, your eyes shutting tightly as his cock spreads you apart.");
+					}
+					else{
+						writeText("With no more warning than that, he thrusts into your ass as you flinch hard at the sudden intrusion.");
+					}
+					writeSpeech("Moth","images/CQ/icons/mothman.png","No! Eyes <i>open,</i> human!");
+					writeText("His fingers force open your eyes as they start to water even more, both from the dryness of the air and the tears from barely-lubed anal pounding.");
+					writeText("You were fighting just to blink and, each time you did, he only got rougher, angry that you deprived him of your light for even a moment.");
+					if(data.story.curseSubmission){
+						writeText("After a few more seconds, you can't help but start to moan as he thrusts, your body reacting strongly to the feeling of being taken so forcefully.");
+						writeText("Every thrust starts pushing you towards your own completion, but it never seems like the moth is going to slow down.");
+					}
+					else{
+						writeText("Despite yourself, you can't help but feel moans start to well up inside your throat. The moth keeps oozing pre into your ass, making it feel hotter and hotter like some sort of aphrodisiac with each thrust.");
+						writeText("You try and hold them back but then you start to feel it.");
+					}
+					writeText("Not slowing down for a moment, you feel the moth's cock start to tense inside your ass, thick ropes of cum spurting into your ass one after the other.");
+					writeText("His cock seems to expand a little bit as he does, the jizz still spurting out with no signs of stopping as he adjusts his grip on you.");
+					writeText("At this point, you can't hold back anymore, your every sensation feeling like its magnified by his jizz running up your rectum.");
+					writeText("His fluffy fuzz rubbing against your chest, his hard cock slamming into your prostate, even the feeling of his breath against your face...");
+					if(data.story.curseSubmission){
+						writeText("Despite nothing more than the occasional, accidental brushing of his fuzz against your shaft, you start spurting cum all over yourself as you start clenching around his shaft.");
+						writeText("Unable to control your own body, the convulsing from your orgasm pulls your face away from his grip, and you barely register his response until his hand reaches out again.");
+						writeText("The moth starts hammering into you even harder, causing your still-limp cock to keep oozing jizz and precum across your belly.");
+						writeText("He just keeps going, bottoming out in your ass as you limply accept him. Resigning yourself to your fate, you let yourself be entranced in his eyes, much like he is in yours.");
+					}
+					else{
+						writeText("You feel the pleasure overpower you as you squirm underneath him, your face contorting in ecstasy as your face slips away.");
+						writeSpeech("Moth","images/CQ/icons/mothman.png","<i><b>NO!</b> Give me <b>LIGHT!</b></i>");
+						writeText("The moth starts hammering into you even harder, causing your entire body to start convulsing underneath it as you lose control.");
+						writeText("He just keeps going, bottoming out in your ass as you go limp. Resigning yourself to your fate, you let yourself be entranced in his eyes, much like he is in yours.");
+					}
+					writeText("It isn't until you see the first light of dawn that he finally starts to slow down, looking up.");
+					writeText("He smiles innocently, finally pulling his still-hard cock out of your ass.");
+					if(data.story.curseSubmission){
+						writeText("The sensation of his dozens of thick, almost gel-like cum spilling out of you causes your dick to twitch, trying to spurt another load out but not having any cum left to spurt out.");
+					}
+					writeSpeech("Moth","images/CQ/icons/mothman.png","Mm~! Thank you human! Your light wasn't very bright, but it <i>was</i> very nice!");
+					writeText("With that, he just leaps into the air and flies off, leaving your body soaked in sweat, moth-glitter, and what feels like more than half a gallon of hot bug semen spilling out of you.");
+					writeText("When you're finally able to stand up, feeling completely defeated, you resign yourself to heading back to town and just pretending you never found the moth.");
+					writeText("Half-shambling, half-limping, you slowly return to the guild hall to clean up, sleep, and eat... Even if you do already feel full...");
+					break;
+				}
+				else{
+					writeText("Thinking quickly, you grab the lantern with one hand and hold the other up in a placating manner.");
+					writeText("You focus on the lantern, trying to feel what's wrong with it using your... <i>limited</i> magical abilities.");
+					writeText("Fortunately, he pauses and gives you enough time to feel out the problem.");
+					writeText("A few seconds later, you feel your own energy seep into the lantern, a thin piece of metal shining a faint blue as it shifts around, looking thinner but fitting correctly.");
+					writeText("It's not pretty, and you can't fix the glass, but if it's like this...");
+					writeSpeech("Moth","images/CQ/icons/mothman.png","U-Uwaa~!");
+					writeText("The moth practically moans as the lantern reignites, coming to life in your hands.");
+					writeText("It almost lunges at you, and you prepare to leap back, but it stops, now speaking gently.");
+					writeSpeech("Moth","images/CQ/icons/mothman.png","Ah... M-Mister human, can I...?");
+					writeText("Looking at it, it doesn't exactly seem like the smartest monster. If you put the lantern down on the ground, you could probably take advantage of the distraction...")
+					writeTransition("guildQuestMothmanAgiWinFuck","Put the lantern on the ground and move behind the moth");
+					writeTransition("guildQuestMothmanAgiWinGift","Hand the mothman the lantern");
+					break;
+				}
+			}
+			else{
+				writeText("When you hear the wingbeats coming from behind you, you barely have the time to leap out of the way.");
+				writeText("It clearly didn't count on you dodging, as it crashes pretty heavily into the ground in front of you.");
+				writeSpeech("Moth","images/CQ/icons/mothman.png","A-Ah!");
+				writeText("He gets up pretty slowly, scrambling around to look at you fearfully.");
+				writeSpeech("Moth","images/CQ/icons/mothman.png","Please, d-don't hurt me! I'm sorry!");
+				writeText("You stop for a moment, looking it over. As you do, it quickly turns its back towards you and half-rolls-up. It seems to be trying to show its submission, but...");
+				writeBig("images/CQ/content/scene003-2.png");
+				writeText("You're not sure if that's the kind of submission it's actually going for.");
+				writeText("Its lithe features are surpisingly clear in the faint moonlight, glinting off incredibly faint scales as it looks past its shoulder at you.");
+				writeSpeech("Moth","images/CQ/icons/mothman.png","I-I just needed to be close to the light! I need it <i>so bad!</i> C-Can I please look at your light? Just until the sun rises!");
+				writeText("Looking at it, it doesn't exactly seem like the smartest monster. If you put the lantern down on the ground, you could probably take advantage of the distraction...")
+				writeTransition("guildQuestMothmanAgiWinFuck","Put the lantern on the ground and move behind the moth");
+				writeTransition("guildQuestMothmanAgiWinGift","Hand the mothman the lantern");
+				break;
+			}
+		}
+		case "guildQuestMothmanAgiWinFuck" : {
+			writeText("You gently set the lantern down in front of the moth, who gleefully takes that as permission to throw himself to the ground in front of it, all but rubbing his fuzz against the thing.");
+			writeText("Cautiously, you walk around the moth, but it doesn't seem like he's paying attention to anything aside from his precious light.");
+			writeText("When you arrive right behind him, his ass raised in the air as he stares blissfully into the light, you can't help but notice a faint bead of wetness along his ass.");
+			writeText("It seems to be some sort of natural lube...? It's almost completely clear, but seems to almost glitter in the moonlight, not unlike his fluffy scales.");
+			writeText("He lets out a small moan as you run your finger along his hole, his breathing starting to deepen but his focus holding.");
+			writeText("It almost seems like a challenge, really.");
+			writeText("You start dragging your cock along his ass, spreading the lube all over your shaft as you line it up.");
+			writeText("You can't help but take a bit of satisfaction as you see his eyes shut for a moment when you thrust.");
+			writeScene("guildQuestMothmanAgiWinFuck2");
+			break;
+		}
+		case "guildQuestMothmanAgiWinGift" : {
+			writeText("You decide to just hand the lantern over to the moth, causing its eyes to practically light up in joy.");
+			writeText("It almost reverently takes it from your hands, hesitating for just a second to check your own eyes to make sure it was okay, before letting out a high-ptiched <i>squee</i> and placing it gently down.");
+			writeText("Its eyes sparkle with firelight as it stares blissfully into the flame. After a few seconds, you note that it has an... odd, reaction.");
+			writeText("Small half-moans come out of its lips as its cock starts to swell, a bright red-orange head starting to just barely poke out of its foreskin.");
+			writeText("It seems to reach down to start playing with it for a moment, but its hand stops.");
+			writeText("Then it starts moving again, but goes further back.");
+			writeText("You can see, glistening faintly in the moonlight, that the moth's ass seems like it's already lubing itself up as he starts teasing at his puckered hole with a finger.");
+			writeText("You can't help but get a bit aroused as you watch, and, given that he's shifting a bit to point himself towards you, it seems like he's doing it on purpose.");
+			writeSpeech("Moth","images/CQ/icons/mothman.png","Um, M-Mister Human... Please...?");
+			writeText("He wiggles his lithe, toned ass at you, a bead of precum falling from his cockhead as he does.");
+			writeSpeech("Moth","images/CQ/icons/mothman.png","P-Please... Fuck me?");
+			writeText("It's clear that he didn't intend for it to come out as more of a question, but...");
+			writeText("You're pretty quick with an answer.");
+			writeText("He moans as you line yourself up behind him, his face pressing against the dirt beside the lantern now.");
+			writeText("You spread the his natural lube across as much of him as you can, before you <i>thrust</i>.");
+			writeScene("guildQuestMothmanAgiWinFuck2");
+			break;
+		}
+		case "guildQuestMothmanAgiWinFuck2" : {
+			writeSpeech("Moth","images/CQ/icons/mothman.png","U-Uwaaa...~! L-Light...!");
+			writeText("He tries to keep his eyes on the lantern, muttering 'light' over and over like a mantra.");
+			writeText("Each time your thrust causes him to stutter or stop, you get a little bit more turned on.");
+			writeText("After a few test thrusts, you finally push deep enough to bottom-out, enjoying the tight sensation across your entire shaft and the feeling of his fuzz nuzzling against your hips.");
+			writeText("Not for too long, though, as you pull back and start pleasuring yourself with the gradually less-indifferent moth-boy's butt. Your balls gently bounce against his own as they sway back and forth, his cock dribbling more and more pre-cum onto his calves.");
+			writeText("There's still not much outward reaction, aside from his labored breathing, but you can feel him start to tense up, squeezing tightly and seemingly milking your cock.");
+			writeSpeech("Moth","images/CQ/icons/mothman.png","L-Light... Liiight...!");
+			writeText("Finally, unable to take any more, he starts spasming around you, shooting ropes of wasted bug semen onto his thighs, calves, and the ground.");
+			writeText("The extra stimulation pushes you over the edge too, your load spurting deeply into his ass as you saw into him a little bit more.");
+			writeText("Pulling out, you can see your jizz start to dribble out of him, dripping down and mixing with his own cum.");
+			writeText("With that, he basically goes completely limp, collapsing bodily into the dirt and staring vacantly at the light with lidded eyes.");
+			writeText("You take some time to rest yourself, content to wait until dawn.");
+			writeText("It doesn't take long, considering the fact that you end up accidentally falling asleep, but you do wake up to the gentle touch of the moth's hand on your chest.");
+			writeSpeech("Moth","images/CQ/icons/mothman.png","U-Um... Thank you, a whole bunch! Everyone else's lights kept breaking, but you let me look at yours all night!");
+			writeText("He pulls you into a tight embrace, nuzzling up for a second before pulling back.");
+			writeSpeech("Moth","images/CQ/icons/mothman.png","If it wouldn't be too much, could I, maybe... have it?");
+			writeText("You think for a moment... and shrug. It's not like they're expensive, and he has a light of his own, maybe he'll stop attacking people?");
+			writeText("You tell him that, and are quickly caught off-guard when he excitedly presses his lips against yours.");
+			writeSpeech("Moth","images/CQ/icons/mothman.png","Thank you thank you <i>thank you!</i>");
+			writeText("He quickly bounces up and grabs your hand, placing it against his chest.");
+			writeText("Before you can say anything, you can feel his energy start to almost overflow, the sensation of his Essence pouring out.");
+			writeSpeech("Moth","images/CQ/icons/mothman.png","It's not much, but I can share!");
+			writeText("'Not much' is pretty inaccurate, but you accept the energy, his Essence sinking into you before he leaps up and grabs the lanter.");
+			writeSpeech("Moth","images/CQ/icons/mothman.png","Thank you <i>so much,</i> human! I'll never forget your niceness!");
+			writeText("With that, he takes off flying into the air, hovering just above the tree line before darting away.");
+			writeText("That was... nice. Looks like he won't attack anyone for a while, at least.");
+			writeTransition("guildHallMissionComplete");
+		}
+		case "guildHallMissionComplete" : {
+			writeText("Neat, you won. Unfortunately, the next section isn't ready yet, so clicking below will warp you to the guild-return scene for the kobold mission. I'll fix this later.");
+			writeTransition("forestKoboldComplete2");
+		}
+
+
+
+
+
 		case "yourSisterArrives" : {
 			writeText("Your sister slumps sleepily onto her chair. Constant all-nighters have sapped her of her mortal coil.");
 			writeText("She's more of a night owl because of her job as an IT consultant. She made a habit of snooping through your phone in the past to show you how lax your security was, so you should be careful not to leave your phone around her for now.");
