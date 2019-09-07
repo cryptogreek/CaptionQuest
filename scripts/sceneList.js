@@ -407,6 +407,8 @@ function writeScene(scene) {
 			break;
 		}
 		case "forestKoboldAgiWinFuck" : {
+			data.story.playerEss += 1;
+			updateMenu();
 			writeText("You grab the back of her head and press it into the ground, the impact accentuated with her butt tensing against you.");
 			writeText("She starts moaning into the dirt as you pull your pants down enough to pop your dick out. Given a kobold's strong sense of smell, it's not hard to figure out why her snatch is practically drooling at this point.");
 			writeText("You line yourself up against her pussylips, sliding your cock against them to get it slick.");
@@ -444,6 +446,8 @@ function writeScene(scene) {
 			break;
 		}
 		case "forestKoboldAgiWinChaste" : {
+			data.story.playerEss += 1;
+			updateMenu();
 			writeText("While holding her steady, you start explaining the faults in what she's doing, from forcing herself onto others, as well as in taking their valuables after she, assumedly, fucks them into unconsciousness.");
 			writeText("After a few sentences, she stops shifting and struggling so much, so you assume you're getting to her with your words.");
 			writeText("You carefully continue, choosing your words as she relaxes further, and conclude with a heart-warming statement about the importance of seeking to help others, rather than taking from them.");
@@ -474,6 +478,8 @@ function writeScene(scene) {
 			break;
 		}
 		case "forestKoboldSubby" : {
+			data.story.playerEss += 1;
+			updateMenu();
 			writeText("When you wake up, it's to a bone-deep soreness in your hips and the pleasant, if surprising feeling of the kobold laying gently against your chest, apparently having fucked you into even more of a coma than you were.");
 			writeText("Despite that, you can clearly see her hand cupping her pussy in her sleep, seemingly unwilling to let any of your cum drip out.");
 			writeText("It wasn't exactly the most <i>orthodox</i> method of stopping the kobold, but you get the feeling that her heat is probably sated (at least for a while), and she won't be attacking anyone for a little while.");
@@ -685,6 +691,7 @@ function writeScene(scene) {
 		}
 		case "guildQuestMothmanAgiWinFuck2" : {
 			data.story.taintedMoth = true;
+			data.story.playerEss +=1;
 			console.log("taintedMoth set to "+data.story.taintedMoth);
 			writeSpeech("Moth","images/CQ/icons/mothman.png","U-Uwaaa...~! L-Light...!");
 			writeText("He tries to keep his eyes on the lantern, muttering 'light' over and over like a mantra.");
