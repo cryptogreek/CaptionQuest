@@ -12,11 +12,13 @@ function writeScene(scene) {
 			break;
 		}
 		case "cardGallery" : {
+			writeText("<i><b>Choose one of the three 0th Fates to decide your Divine Patron.</b></i>");
 			writeBig("images/CQ/content/scene001-1.png");
 			writeBig("images/CQ/content/scene001-2.png");
 			writeBig("images/CQ/content/scene001-3.png");
-			writeBig("images/CQ/content/scene002-1.png");
-			writeBig("images/CQ/content/scene003-1.png");
+			writeText("<i><b>Choose five of the 0th Events.</b></i>");
+			writeFull("images/CQ/content/scene002-1.png");
+			writeFull("images/CQ/content/scene003-1.png");
 			writeTransition("start","Leave the gallery");
 			break;
 		}
@@ -80,7 +82,7 @@ function writeScene(scene) {
 				case 1:
 				writeText("You can feel yourself getting stronger, your body almost feeling like it's growing with each step, yet somehow getting lighter. You can see your exposed body's musculature as you feel a heat soaking into your skin as the distant sun seems to turn orange and much, much brighter.");
 				writeText("Despite that, you feel a coldness spread through you for a moment, a shock to your system as you nearly stumble. The cold hovers around your crotch for a moment, before finally disappearing, leaving only a faint emptiness behind as you realize that you've dropped to your knees in front of someone.");
-				writeBig("images/CQ/content/scene001-1.png");
+				writeBig("images/CQ/content/scene001-1-raw.jpg");
 				writeText("Staring up at her, you have trouble focusing your hazy vision on her almost porcelain-like face. You don't know why or how, but you somehow know.");
 				writeText("She is the Lady of Ash - a Goddess.");
 				writeSpeech("Lady of Ash","images/CQ/icons/asira.png","Do you intend to waste that potential of yours? You could achieve a great deal more, <b>become</b> much more.");

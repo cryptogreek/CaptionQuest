@@ -623,6 +623,15 @@ function writeSpeech (name, img, text) {
 	`
 }
 
+function writeFull (img) {
+	if (imagesDisabled != true) {
+		document.getElementById('output').innerHTML += `
+			<img class="fullPicture" src="` + img + `">
+			<br>
+		`;
+	}
+}
+
 function writeBig (img) {
 	if (imagesDisabled != true) {
 		document.getElementById('output').innerHTML += `
@@ -648,6 +657,12 @@ function writeMed (img) {
 		<img class="medPicture" id="` + img + `" src="` + img + `">
 	`;
 	}
+}
+
+function galleryImage (img) {
+	document.getElementById('output').innerHTML += `
+		<img class="galleryImage" id="` + img + `" src="` + img + `">
+	`;
 }
 
 function writeTransition (name, scene) {
