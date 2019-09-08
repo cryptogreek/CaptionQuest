@@ -18,6 +18,7 @@ function writeScene(scene) {
 			writeBig("images/CQ/content/scene002-1.png");
 			writeBig("images/CQ/content/scene003-1.png");
 			writeTransition("start","Leave the gallery");
+			break;
 		}
 		//Prologue
 		case "prologueEasy" : {
