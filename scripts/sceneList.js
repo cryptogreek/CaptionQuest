@@ -9,6 +9,7 @@ function writeScene(scene) {
 			writeTransition("prologue", "Start the game");
 			writeTransition("prologueEasy","Play the game on Easy Mode");
 			writeTransition("cardGallery","View the Card Gallery");
+			writeTransition("changelog","View changelog");
 			break;
 		}
 		case "cardGallery" : {
@@ -20,6 +21,35 @@ function writeScene(scene) {
 			writeFull("images/CQ/content/scene002-1.png");
 			writeFull("images/CQ/content/scene003-1.png");
 			writeTransition("start","Leave the gallery");
+			break;
+		}
+		case "changelog" : {
+			writeText("Current Version: V0.0");
+			writeText("The game is technically a game, and can be played. It doesn't have enough content yet to warrant a real number. <br><br><br>");
+
+
+			writeText("<b><i>V0.0 added:</i></b>");
+			writeText("Lady of Ash introduction");
+			writeText("The Noble One introduction");
+			writeText("King of Spite introduction");
+			writeText("Placeholder Joke God, the Dick King, introduction");
+			writeText("Kobold quest");
+			writeText("Post-victory kobold sex scene");
+			writeText("Post-defeat kobold sex scene");
+			writeText("Implemented the the curses of Submission, Infertility,  Narcissism, and Kindness");
+			writeText("Implemented the infinite-inventory system");
+			writeText("Added a Curse of Submission kobold sex scene");
+			writeText("Added the ability to go to the guild");
+			writeText("Added the guild's quest board");
+			writeText("Mothman/mothboi quest");
+			writeText("Both AGI and MAG victory scenes for the mothman");
+			writeText("Additional variation on the mothman victory scene");
+			writeText("Post-defeat scene with the mothman");
+			writeText("Additional dialogue for Submissives added to mothman defeat");
+			writeText("Added Easy Mode");
+			writeText("Added the Card Gallery for the CYOA cards created by Dia and Erelzen");
+			writeText("Added a changelog<br><br>");
+			writeTransition("start","Exit the changelog");
 			break;
 		}
 		//Prologue
