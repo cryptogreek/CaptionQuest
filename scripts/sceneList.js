@@ -8,7 +8,16 @@ function writeScene(scene) {
 			writeText("As an additional note, you can click on the title of a window to close it. For example, if you click 'INVENTORY' on the left there, you can close the new window by clicking anywhere in the 'INVENTORY' section at the top.");
 			writeTransition("prologue", "Start the game");
 			writeTransition("prologueEasy","Play the game on Easy Mode");
+			writeTransition("cardGallery","View the Card Gallery");
 			break;
+		}
+		case "cardGallery" : {
+			writeBig("images/CQ/content/scene001-1.png");
+			writeBig("images/CQ/content/scene001-2.png");
+			writeBig("images/CQ/content/scene001-3.png");
+			writeBig("images/CQ/content/scene002-1.png");
+			writeBig("images/CQ/content/scene003-1.png");
+			writeTransition("start","Leave the gallery");
 		}
 		//Prologue
 		case "prologueEasy" : {
@@ -88,7 +97,7 @@ function writeScene(scene) {
 				writeText("But as you do, you can feel a pull from deep inside – a desire, a <i>greed</i> that threatens to consume you. Your chest feels like an empty void, reaching out to grab onto anything it can hold onto, to truly <i>know</i> belongs to it.");
 				writeText("The desire causes you to clutch your chest, your vision starting to swim, before you realize that you've arrived at the end of the path and that there's someone seated in front of you. You hear the whispers reach a crescendo around you, and you can understand what they say:");
 				writeText("This is the The Noble One, Goddess of Nobility.");
-				writeBig("images/CQ/content/scene001-2.png");
+				writeBig("images/CQ/content/scene001-2-raw.jpg");
 				writeText("Even while seated, your full height only reaches near her necklace as she shifts her legs and looks down at you, her eyes appraising you chillingly.");
 				writeSpeech("The Noble One","images/CQ/icons/majiana.png","A voracious one, hm? Like calls to like, I suppose. Time is short, so I will keep this brief.");
 				writeText("She leans back in her chair, her eyes narrowing at you for a moment.");
