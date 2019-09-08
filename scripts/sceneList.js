@@ -85,12 +85,12 @@ function writeScene(scene) {
 				writeBig("images/CQ/content/scene001-1-raw.jpg");
 				writeText("Staring up at her, you have trouble focusing your hazy vision on her almost porcelain-like face. You don't know why or how, but you somehow know.");
 				writeText("She is the Lady of Ash - a Goddess.");
-				writeSpeech("Lady of Ash","images/CQ/icons/asira.png","Do you intend to waste that potential of yours? You could achieve a great deal more, <b>become</b> much more.");
+				writeSpeech("Lady of Ash","images/CQ/icons/asira.jpg","Do you intend to waste that potential of yours? You could achieve a great deal more, <b>become</b> much more.");
 				writeText("She leans forward a bit, her lava-red hair cascading down almost enough to reach you.");
-				writeSpeech("Lady of Ash","images/CQ/icons/asira.png","A power beyond your mortal coil. A body as strong and as lasting as stone. But in exchange, a body far more barren. This is the path you have chosen.");
+				writeSpeech("Lady of Ash","images/CQ/icons/asira.jpg","A power beyond your mortal coil. A body as strong and as lasting as stone. But in exchange, a body far more barren. This is the path you have chosen.");
 				writeText("You nod numbly, still unable to think straight, as everything starts to fade bit-by-bit.");
 				writeText("After a moment, her eyes and the faint silhouette of her hair are all that remains, but her voice still comes out just as clearly.")
-				writeSpeech("Lady of Ash","images/CQ/icons/asira.png","When you awaken, my champion, you will bear both my gift and my curse. Use them, and achieve your true potential.")
+				writeSpeech("Lady of Ash","images/CQ/icons/asira.jpg","When you awaken, my champion, you will bear both my gift and my curse. Use them, and achieve your true potential.")
 				writeText("<b>You have chosen the path of Strength.<i> STR has increased.</i></b>");
 				writeText("<b>You sacrificed your fertility for power.<i> Your cum is now infertile.</i></b>");
 				data.story.curseInfertile = true;
@@ -102,11 +102,11 @@ function writeScene(scene) {
 				writeText("This is the The Noble One, Goddess of Nobility.");
 				writeBig("images/CQ/content/scene001-2-raw.jpg");
 				writeText("Even while seated, your full height only reaches near her necklace as she shifts her legs and looks down at you, her eyes appraising you chillingly.");
-				writeSpeech("The Noble One","images/CQ/icons/majiana.png","A voracious one, hm? Like calls to like, I suppose. Time is short, so I will keep this brief.");
+				writeSpeech("The Noble One","images/CQ/icons/majiana.jpg","A voracious one, hm? Like calls to like, I suppose. Time is short, so I will keep this brief.");
 				writeText("She leans back in her chair, her eyes narrowing at you for a moment.");
-				writeSpeech("The Noble One","images/CQ/icons/majiana.png","I have need for a champion, one that can use my knowledge of the arcane and who is more... <i>open</i> to the sorts of propositions those of proper status should be eager to take. And seeing as you walked the full path to this place, I assume our desires align.");
+				writeSpeech("The Noble One","images/CQ/icons/majiana.jpg","I have need for a champion, one that can use my knowledge of the arcane and who is more... <i>open</i> to the sorts of propositions those of proper status should be eager to take. And seeing as you walked the full path to this place, I assume our desires align.");
 				writeText("The smallest quirk of a smile graces her features for a moment, but it's quickly replaced by a stony look, even as the world begins to fade away.");
-				writeSpeech("The Noble One","images/CQ/icons/majiana.png","You will be my champion. Your place is above all other creatures but myself. See that <i>everything</i> remembers as such.");
+				writeSpeech("The Noble One","images/CQ/icons/majiana.jpg","You will be my champion. Your place is above all other creatures but myself. See that <i>everything</i> remembers as such.");
 				writeText("<b>Arcane secrets run through your head. <i>MAG has increased.</i></b>");
 				writeText("<b>You have sacrificed self-restraint for knowledge. <i>Refusing bargains is now nearly impossible.</i></b>");
 				data.story.curseNarcissus = true;
@@ -118,11 +118,11 @@ function writeScene(scene) {
 				writeText("The King of Strife.");
 				writeBig("images/CQ/content/scene001-3-raw.jpg");
 				writeText("Sunken eyes stare harshly down at you, standing at easily three times your height as shifts his staff.");
-				writeSpeech("King of Strife","images/CQ/icons/bob.png","Neither you, nor I, have any reason to waste time with details. You did not come here for a <i>lecture</i>, but for <i>power</i>. Receive my blessing, become the champion of the God of Strife, and go forth.");
+				writeSpeech("King of Strife","images/CQ/icons/bob.jpg","Neither you, nor I, have any reason to waste time with details. You did not come here for a <i>lecture</i>, but for <i>power</i>. Receive my blessing, become the champion of the God of Strife, and go forth.");
 				writeText("His staff slowly shifts towards you, but his scowl deepens.");
-				writeSpeech("King of Strife","images/CQ/icons/bob.png","But know this. My disciples do not abide by <i>needless</i> suffering, and the cost of this power is that you will not stand idly in the face of it either.");
+				writeSpeech("King of Strife","images/CQ/icons/bob.jpg","But know this. My disciples do not abide by <i>needless</i> suffering, and the cost of this power is that you will not stand idly in the face of it either.");
 				writeText("The world begins to go dark, his staff hovering just millimeters from the top of your head.");
-				writeSpeech("King of Strife","images/CQ/icons/bob.png","Good luck, champion. Now, show us your worth in the waking world.");
+				writeSpeech("King of Strife","images/CQ/icons/bob.jpg","Good luck, champion. Now, show us your worth in the waking world.");
 				data.story.curseKindness = true;
 				break;
 				case 4:
@@ -275,7 +275,7 @@ function writeScene(scene) {
 			writeText("She nudges at your straining pants with a foot, putting her in an even <i>more</i> dominant position as those claws of hers sit just around navel-level.");
 			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","So much for being some kinda hunter. From where I'm standing, you seem less like a hunting-hound and a whole lot more like a puppy!");
 			writeText("At that, she grins and turns, angling her ass at you.");
-			writeBig("images/CQ/content/scene002-raw.png");
+			writeBig("images/CQ/content/scene002-raw.jpg");
 			writeText("Her ass jiggles furiously as sound of her hand against it rings throughout the clearing.");
 			writeSpeech("Kobold","images/CQ/icons/kobold2.jpg","Like what you're looking at, big guy? Truth be told, I'm only really here for a bit of fun during <i>peak breeding season.</i> I'd've fucked that noble, but the guy couldn't get it up!");
 			writeText("Her hand spreads her ass as she gives what you're pretty sure is a wink.");
@@ -560,9 +560,9 @@ function writeScene(scene) {
 				writeText("By the time you hear the wingbeats behind you, it's already too late.");
 				writeText("The mothman slams into your back, throwing the both of you to the ground. The worst part, though, is the sound of breaking glass.");
 				writeText("There's a momentary look of honest confusion on his face as he stands, the impact knocking his pants loose as he freezes.");
-				writeBig("images/CQ/content/scene003-raw.png");
+				writeBig("images/CQ/content/scene003-raw.jpg");
 				writeText("Another second goes by, and his expression twists into anger.");
-				writeSpeech("Moth","images/CQ/icons/mothman.png","<i><b>The light!</b></i>");
+				writeSpeech("Moth","images/CQ/icons/mothman.jpg","<i><b>The light!</b></i>");
 				writeText("He immediately whirls on you, his voice desperate as his eyes seem to almost glow red in the darkness from the glinting moonlight.");
 				if(data.story.playerMag < 1 || data.story.curseSubmission){
 					if(data.story.playerMag < 1 && data.story.curseSubmission == false){
@@ -578,23 +578,23 @@ function writeScene(scene) {
 						writeText("Unable to see, you can only shout wildly as you feel the moth tackle you, knocking the both of you over a root. A second later, and he has you pinned.");
 					}
 					writeText("You're unable to move, can barely see, and the moth is close enough that you can feel his breath on your face.");
-					writeSpeech("Moth","images/CQ/icons/mothman.png","Human...! Give me light!");
+					writeSpeech("Moth","images/CQ/icons/mothman.jpg","Human...! Give me light!");
 					writeText("You try to tell him that you don't <i>have</i> any other light, but he doesn't seem to listen.");
 					writeText("Then, he sees your eyes.");
-					writeSpeech("Moth","images/CQ/icons/mothman.png","There...! There's light in your eyes!");
+					writeSpeech("Moth","images/CQ/icons/mothman.jpg","There...! There's light in your eyes!");
 					writeText("It takes a second, but you realize that, considering the blinding scales, your eyes had started watering, and your tears were reflecting the moonlight.");
 					writeText("It leans in even closer to your face, its expression conveying rapture as it presses against you.");
 					writeText("A moment later, you start to feel something press strongly against your crotch.");
 					writeText("Without breaking eye-contact, you can feel your pants violently being pulled down as you try and hold as still as possible.");
 					writeText("The cool air runs across your exposed lower body, but your focus quickly lands on the hard heat pressing against your anus.");
-					writeSpeech("Moth","images/CQ/icons/mothman.png","Your light feels <i>so good...!</i>");
+					writeSpeech("Moth","images/CQ/icons/mothman.jpg","Your light feels <i>so good...!</i>");
 					if(data.story.curseSubmission){
 						writeText("With just that, he thrusts into your tight ass as your hands grasp at his fluff, your eyes shutting tightly as his cock spreads you apart.");
 					}
 					else{
 						writeText("With no more warning than that, he thrusts into your ass as you flinch hard at the sudden intrusion.");
 					}
-					writeSpeech("Moth","images/CQ/icons/mothman.png","No! Eyes <i>open,</i> human!");
+					writeSpeech("Moth","images/CQ/icons/mothman.jpg","No! Eyes <i>open,</i> human!");
 					writeText("His fingers force open your eyes as they start to water even more, both from the dryness of the air and the tears from barely-lubed anal pounding.");
 					writeText("You were fighting just to blink and, each time you did, he only got rougher, angry that you deprived him of your light for even a moment.");
 					if(data.story.curseSubmission){
@@ -617,7 +617,7 @@ function writeScene(scene) {
 					}
 					else{
 						writeText("You feel the pleasure overpower you as you squirm underneath him, your face contorting in ecstasy as your face slips away.");
-						writeSpeech("Moth","images/CQ/icons/mothman.png","<i><b>NO!</b> Give me <b>LIGHT!</b></i>");
+						writeSpeech("Moth","images/CQ/icons/mothman.jpg","<i><b>NO!</b> Give me <b>LIGHT!</b></i>");
 						writeText("The moth starts hammering into you even harder, causing your entire body to start convulsing underneath it as you lose control.");
 						writeText("He just keeps going, bottoming out in your ass as you go limp. Resigning yourself to your fate, you let yourself be entranced in his eyes, much like he is in yours.");
 					}
@@ -626,7 +626,7 @@ function writeScene(scene) {
 					if(data.story.curseSubmission){
 						writeText("The sensation of his dozens of thick, almost gel-like cum spilling out of you causes your dick to twitch, trying to spurt another load out but not having any cum left to spurt out.");
 					}
-					writeSpeech("Moth","images/CQ/icons/mothman.png","Mm~! Thank you human! Your light wasn't very bright, but it <i>was</i> very nice!");
+					writeSpeech("Moth","images/CQ/icons/mothman.jpg","Mm~! Thank you human! Your light wasn't very bright, but it <i>was</i> very nice!");
 					writeText("With that, he just leaps into the air and flies off, leaving your body soaked in sweat, moth-glitter, and what feels like more than half a gallon of hot bug semen spilling out of you.");
 					writeText("When you're finally able to stand up, feeling completely defeated, you resign yourself to heading back to town and just pretending you never found the moth.");
 					writeText("Half-shambling, half-limping, you slowly return to the guild hall to clean up, sleep, and eat... Even if you do already feel full...");
@@ -643,10 +643,10 @@ function writeScene(scene) {
 					writeText("Fortunately, he pauses and gives you enough time to feel out the problem.");
 					writeText("A few seconds later, you feel your own energy seep into the lantern, a thin piece of metal shining a faint blue as it shifts around, looking thinner but fitting correctly.");
 					writeText("It's not pretty, and you can't fix the glass, but if it's like this...");
-					writeSpeech("Moth","images/CQ/icons/mothman.png","U-Uwaa~!");
+					writeSpeech("Moth","images/CQ/icons/mothman.jpg","U-Uwaa~!");
 					writeText("The moth practically moans as the lantern reignites, coming to life in your hands.");
 					writeText("It almost lunges at you, and you prepare to leap back, but it stops, now speaking gently.");
-					writeSpeech("Moth","images/CQ/icons/mothman.png","Ah... M-Mister human, can I...?");
+					writeSpeech("Moth","images/CQ/icons/mothman.jpg","Ah... M-Mister human, can I...?");
 					writeText("Looking at it, it doesn't exactly seem like the smartest monster. If you put the lantern down on the ground, you could probably take advantage of the distraction...")
 					writeTransition("guildQuestMothmanAgiWinFuck","Put the lantern on the ground and move behind the moth");
 					writeTransition("guildQuestMothmanAgiWinGift","Hand the mothman the lantern");
@@ -657,14 +657,14 @@ function writeScene(scene) {
 				writeText("<b>AGI test <i>passed.</i></b>");
 				writeText("When you hear the wingbeats coming from behind you, you barely have the time to leap out of the way.");
 				writeText("It clearly didn't count on you dodging, as it crashes pretty heavily into the ground in front of you.");
-				writeSpeech("Moth","images/CQ/icons/mothman.png","A-Ah!");
+				writeSpeech("Moth","images/CQ/icons/mothman.jpg","A-Ah!");
 				writeText("He gets up pretty slowly, scrambling around to look at you fearfully.");
-				writeSpeech("Moth","images/CQ/icons/mothman.png","Please, d-don't hurt me! I'm sorry!");
+				writeSpeech("Moth","images/CQ/icons/mothman.jpg","Please, d-don't hurt me! I'm sorry!");
 				writeText("You stop for a moment, looking it over. As you do, it quickly turns its back towards you and half-rolls-up. It seems to be trying to show its submission, but...");
-				writeBig("images/CQ/content/scene003-2.png");
+				writeBig("images/CQ/content/scene003-2.jpg");
 				writeText("You're not sure if that's the kind of submission it's actually going for.");
 				writeText("Its lithe features are surpisingly clear in the faint moonlight, glinting off incredibly faint scales as it looks past its shoulder at you.");
-				writeSpeech("Moth","images/CQ/icons/mothman.png","I-I just needed to be close to the light! I need it <i>so bad!</i> C-Can I please look at your light? Just until the sun rises!");
+				writeSpeech("Moth","images/CQ/icons/mothman.jpg","I-I just needed to be close to the light! I need it <i>so bad!</i> C-Can I please look at your light? Just until the sun rises!");
 				writeText("Looking at it, it doesn't exactly seem like the smartest monster. If you put the lantern down on the ground, you could probably take advantage of the distraction...")
 				writeTransition("guildQuestMothmanAgiWinFuck","Put the lantern on the ground and move behind the moth");
 				writeTransition("guildQuestMothmanAgiWinGift","Hand the mothman the lantern");
@@ -692,9 +692,9 @@ function writeScene(scene) {
 			writeText("Then it starts moving again, but goes further back.");
 			writeText("You can see, glistening faintly in the moonlight, that the moth's ass seems like it's already lubing itself up as he starts teasing at his puckered hole with a finger.");
 			writeText("You can't help but get a bit aroused as you watch, and, given that he's shifting a bit to point himself towards you, it seems like he's doing it on purpose.");
-			writeSpeech("Moth","images/CQ/icons/mothman.png","Um, M-Mister Human... Please...?");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","Um, M-Mister Human... Please...?");
 			writeText("He wiggles his lithe, toned ass at you, a bead of precum falling from his cockhead as he does.");
-			writeSpeech("Moth","images/CQ/icons/mothman.png","P-Please... Fuck me?");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","P-Please... Fuck me?");
 			writeText("It's clear that he didn't intend for it to come out as more of a question, but...");
 			writeText("You're pretty quick with an answer.");
 			writeText("He moans as you line yourself up behind him, his face pressing against the dirt beside the lantern now.");
@@ -706,30 +706,30 @@ function writeScene(scene) {
 			data.story.taintedMoth = true;
 			data.story.playerEss +=1;
 			console.log("taintedMoth set to "+data.story.taintedMoth);
-			writeSpeech("Moth","images/CQ/icons/mothman.png","U-Uwaaa...~! L-Light...!");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","U-Uwaaa...~! L-Light...!");
 			writeText("He tries to keep his eyes on the lantern, muttering 'light' over and over like a mantra.");
 			writeText("Each time your thrust causes him to stutter or stop, you get a little bit more turned on.");
 			writeText("After a few test thrusts, you finally push deep enough to bottom-out, enjoying the tight sensation across your entire shaft and the feeling of his fuzz nuzzling against your hips.");
 			writeText("Not for too long, though, as you pull back and start pleasuring yourself with the gradually less-indifferent moth-boy's butt. Your balls gently bounce against his own as they sway back and forth, his cock dribbling more and more pre-cum onto his calves.");
 			writeText("There's still not much outward reaction, aside from his labored breathing, but you can feel him start to tense up, squeezing tightly and seemingly milking your cock.");
-			writeSpeech("Moth","images/CQ/icons/mothman.png","L-Light... Liiight...!");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","L-Light... Liiight...!");
 			writeText("Finally, unable to take any more, he starts spasming around you, shooting ropes of wasted bug semen onto his thighs, calves, and the ground.");
 			writeText("The extra stimulation pushes you over the edge too, your load spurting deeply into his ass as you saw into him a little bit more.");
 			writeText("Pulling out, you can see your jizz start to dribble out of him, dripping down and mixing with his own cum.");
 			writeText("With that, he basically goes completely limp, collapsing bodily into the dirt and staring vacantly at the light with lidded eyes.");
 			writeText("You take some time to rest yourself, content to wait until dawn.");
 			writeText("It doesn't take long, considering the fact that you end up accidentally falling asleep, but you do wake up to the gentle touch of the moth's hand on your chest.");
-			writeSpeech("Moth","images/CQ/icons/mothman.png","U-Um... Thank you, a whole bunch! Everyone else's lights kept breaking, but you let me look at yours all night!");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","U-Um... Thank you, a whole bunch! Everyone else's lights kept breaking, but you let me look at yours all night!");
 			writeText("He pulls you into a tight embrace, nuzzling up for a second before pulling back.");
-			writeSpeech("Moth","images/CQ/icons/mothman.png","If it wouldn't be too much, could I, maybe... have it?");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","If it wouldn't be too much, could I, maybe... have it?");
 			writeText("You think for a moment... and shrug. It's not like they're expensive, and he has a light of his own, maybe he'll stop attacking people?");
 			writeText("You tell him that, and are quickly caught off-guard when he excitedly presses his lips against yours.");
-			writeSpeech("Moth","images/CQ/icons/mothman.png","Thank you thank you <i>thank you!</i>");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","Thank you thank you <i>thank you!</i>");
 			writeText("He quickly bounces up and grabs your hand, placing it against his chest.");
 			writeText("Before you can say anything, you can feel his energy start to almost overflow, the sensation of his Essence pouring out.");
-			writeSpeech("Moth","images/CQ/icons/mothman.png","It's not much, but I can share!");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","It's not much, but I can share!");
 			writeText("'Not much' is pretty inaccurate, but you accept the energy, his Essence sinking into you before he leaps up and grabs the lanter.");
-			writeSpeech("Moth","images/CQ/icons/mothman.png","Thank you <i>so much,</i> human! I'll never forget your niceness!");
+			writeSpeech("Moth","images/CQ/icons/mothman.jpg","Thank you <i>so much,</i> human! I'll never forget your niceness!");
 			writeText("With that, he takes off flying into the air, hovering just above the tree line before darting away.");
 			writeText("That was... nice. Looks like he won't attack anyone for a while, at least.");
 			writeTransition("guildHallMissionComplete", "Return to the guild hall");
